@@ -6,8 +6,8 @@ public class TesteOnda : MonoBehaviour
 {
     public GameObject onda;
 
-    public Vector3 scaleOndaI = new Vector3(1f, 1f, 1f);
-    public Vector3 scaleOndaF = new Vector3(10f, 10f, 10f);
+    public Vector3 scaleOndaI = new Vector3(3f, 3f, 3f);
+    public Vector3 scaleOndaF = new Vector3(40f, 40f, 40f);
 
     public float scaleVelo = 2f;
 

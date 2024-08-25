@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 33420527047454541}
   - component: {fileID: 760599681158085623}
   - component: {fileID: 7399047641321819647}
-  - component: {fileID: 4202959623817515388}
   m_Layer: 0
   m_Name: oEfeito
   m_TagString: Untagged
@@ -85,27 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4202959623817515388
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444682615759302504}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2030775238616735991
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,9 +110,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030775238616735991}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.019996002, y: 0.019996, z: 0.019996}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6871234498562124762}
@@ -151,10 +129,10 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 350
-  m_Range: 200
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2000
+  m_Range: 25
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 156.23679
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -190,9 +168,9 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 12.9, y: 22.456535}
   m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
@@ -235,7 +213,6 @@ GameObject:
   - component: {fileID: 8755398239614815609}
   - component: {fileID: 4657833042133372602}
   - component: {fileID: 5295738986210696031}
-  - component: {fileID: 1669014759929192021}
   m_Layer: 0
   m_Name: OndadeLuz
   m_TagString: Untagged
@@ -308,27 +285,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1669014759929192021
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4475918206978827092}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6493269316878697930
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +296,6 @@ GameObject:
   - component: {fileID: 2459358324216987722}
   - component: {fileID: 2677871434355914075}
   - component: {fileID: 527385516610891301}
-  - component: {fileID: 2425501008915836114}
   m_Layer: 0
   m_Name: OndadeLuz
   m_TagString: Untagged
@@ -413,27 +368,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2425501008915836114
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6493269316878697930}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7031158962890822065
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +379,6 @@ GameObject:
   - component: {fileID: 6871234498562124762}
   - component: {fileID: 240178210087462349}
   - component: {fileID: 4390855730305544953}
-  - component: {fileID: 5324254342819396321}
   m_Layer: 0
   m_Name: oEfeito
   m_TagString: Untagged
@@ -522,27 +455,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5324254342819396321
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7031158962890822065}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7303526535879081425
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +466,6 @@ GameObject:
   - component: {fileID: 8038031416989881920}
   - component: {fileID: 4093137390798783672}
   - component: {fileID: 5367276023256798338}
-  - component: {fileID: 8962159855999986768}
   m_Layer: 0
   m_Name: OndadeLuz
   m_TagString: Untagged
@@ -627,27 +538,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8962159855999986768
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7303526535879081425}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8211533913149527378
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +549,6 @@ GameObject:
   - component: {fileID: 3379313522356521950}
   - component: {fileID: 6648914308029353418}
   - component: {fileID: 8332046596814894957}
-  - component: {fileID: 7390876223469358977}
   m_Layer: 0
   m_Name: oEfeito (1)
   m_TagString: Untagged
@@ -733,24 +622,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7390876223469358977
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8211533913149527378}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

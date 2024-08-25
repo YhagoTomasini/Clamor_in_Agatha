@@ -29,7 +29,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 65461.52
   tint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.46079564, g: 0.7135564, b: 0.8962264, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   active: 0
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
@@ -147,7 +147,7 @@ MonoBehaviour:
   active: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -89
+    m_Value: 8
   tint:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: -69
