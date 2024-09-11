@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TesteShdr
+  m_Name: ShaderEfeito
   m_Shader: {fileID: -6465566751694194690, guid: 377df6139631ca5419af57209c4e055a,
     type: 3}
   m_Parent: {fileID: 0}
