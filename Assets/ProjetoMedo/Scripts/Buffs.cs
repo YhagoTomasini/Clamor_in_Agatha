@@ -20,14 +20,14 @@ public class Buffs : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Buffs"))
+        if (other.CompareTag("Buffs"))
         {
-            //Aumentar barra de progressao. Por animação bm estilo flowlab.
+            Debug.Log("arooz");
             valorProgressao += 1;
 
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
 
         if (valorProgressao >= 2)
