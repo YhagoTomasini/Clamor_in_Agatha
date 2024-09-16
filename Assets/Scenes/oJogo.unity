@@ -19919,6 +19919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agatha
       objectReference: {fileID: 0}
+    - target: {fileID: 2887251230829313675, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8559206812856354855, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}
       propertyPath: m_LocalPosition.x
