@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowCredits : MonoBehaviour
 {
     // Referência para o Canvas dos créditos e o Canvas principal
-    public Canvas creditsCanvas;
-    public Canvas mainCanvas;
+    public GameObject creditsCanvas;
+    public GameObject mainCanvas;
 
     // Método para abrir os créditos
     public void OpenCredits()
