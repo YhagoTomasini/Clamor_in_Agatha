@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TesteOnda : MonoBehaviour
+public class ondaCoisa : MonoBehaviour
 {
     public GameObject onda;
 
@@ -15,7 +15,7 @@ public class TesteOnda : MonoBehaviour
     {
         Vector3 pposition = transform.position;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             GameObject newOnda = Instantiate(onda, pposition, Quaternion.identity);
 
