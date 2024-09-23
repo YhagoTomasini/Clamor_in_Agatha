@@ -1,15 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CutCaixa : MonoBehaviour
 {
-    public GameObject textoCut;
+    public TextMeshProUGUI textoCut;
     private bool objTriggado;
 
     void Start()
     {
-        textoCut.SetActive(false);
+        if (textoCut == null)
+        {
+            GameObject cutTextObj = GameObject.Find("CutText");
+            if (cutTextObj != null)
+            {
+                textoCut = cutTextObj.GetComponent<TextMeshProUGUI>();
+            }
+        }
+
+        if (textoCut != null)
+        {
+            textoCut.enabled = false;
+        }
         objTriggado = false;
     }
 
@@ -18,6 +31,9 @@ public class CutCaixa : MonoBehaviour
         if (objTriggado && Input.GetKeyDown(KeyCode.Space))
         {
             Destroy(gameObject);
+
+            textoCut.enabled = false;
+
         }
     }
 
@@ -26,7 +42,7 @@ public class CutCaixa : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            textoCut.SetActive(true);
+            textoCut.enabled = true;
             objTriggado = true;
         }
     }
@@ -35,7 +51,7 @@ public class CutCaixa : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            textoCut.SetActive(false);
+            textoCut.enabled = false;
             objTriggado = false;
         }
     }
