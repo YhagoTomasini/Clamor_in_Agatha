@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/oJogo.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Ui Game.unity
+    guid: 7811c0c1188a240929b954a87b10fd44
   m_configObjects: {}
