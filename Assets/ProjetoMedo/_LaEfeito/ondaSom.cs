@@ -34,6 +34,7 @@ public class TesteOnda : MonoBehaviour
             tempo += Time.deltaTime;
 
             objeto.transform.localScale = Vector3.Lerp(scaleOndaI, scaleOndaF, tempo / scaleVelo);
+            
 
             yield return null;
         }
