@@ -1,46 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Buffs : MonoBehaviour
 {
-    public GameObject orbsBuff;
-    public GameObject barraProgressao;
-    public float valorProgressao;
+    //public GameObject orbsBuff;
+    public GameObject[] caixas;
+
+    public GameObject barraCanva;
+    public RectTransform rectBarra;
+    public float valorbarraNor;
+    private float valorBarraAtual;
+    private float valorBarraMax = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        valorProgressao = 0;
+        caixas = GameObject.FindGameObjectsWithTag("Caixas");
+
+        valorBarraAtual = 0;
+        rectBarra = barraCanva.GetComponent<RectTransform>();
+
+        progredirBarra();
     }
 
-    // Update is called once per frame
-    void Update()
+    void progredirBarra()
     {
-
+        valorbarraNor = valorBarraAtual / valorBarraMax;
+        rectBarra.localScale = new Vector3(valorbarraNor, 1, 1);
     }
+    
+    // Update is called once per frame
+    void Update(){}
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Buffs"))
         {
-            Debug.Log("arooz");
-            valorProgressao += 1;
+            //Debug.Log("arooz");
+            valorBarraAtual += 1;
 
+            progredirBarra();
             Destroy(other.gameObject);
         }
 
-        if (valorProgressao >= 2)
-        {
-            //Aumentar barra de progressao.
-            //Ativar buff de quebrar.
+        if (valorBarraAtual >= 2 && caixas.Length > 0)
+            {
+                Debug.Log("feijao1");
+                foreach (GameObject caixa in caixas)
+                {
+                    CutCaixa cutCaixas = caixa.GetComponent<CutCaixa>();
+
+                    if (cutCaixas != null)
+                    {
+                        Debug.Log("feijao2");
+                        cutCaixas.podeQuebrar = true;
+                    }
+                }
 
             //Se colidir com objeto invisivel de caixa;
                 //ativar objeto de aviso de ativacao
                 //Se apertar botao
                     //funcao da caixa               
         }
-        if (valorProgressao >= 5)
+        if (valorBarraAtual >= 5)
         {
             //Aumentar barra de progressao.
             //Ativar buff de pular.
@@ -51,7 +75,7 @@ public class Buffs : MonoBehaviour
                     //funcao de pulo  
 
         }
-        if (valorProgressao >= 9)
+        if (valorBarraAtual >= 9)
         {
             //Aumentar barra de progressao.
             //Ativar buff de shrek.

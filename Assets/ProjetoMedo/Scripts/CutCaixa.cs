@@ -8,8 +8,12 @@ public class CutCaixa : MonoBehaviour
     public TextMeshProUGUI textoCut;
     private bool objTriggado;
 
+    public bool podeQuebrar;
+
     void Start()
     {
+        podeQuebrar = false;
+        
         if (textoCut == null)
         {
             GameObject cutTextObj = GameObject.Find("CutText");
@@ -30,17 +34,23 @@ public class CutCaixa : MonoBehaviour
     {
         if (objTriggado && Input.GetKeyDown(KeyCode.Space))
         {
-            Destroy(gameObject);
-
-            textoCut.enabled = false;
-
+            if (podeQuebrar==true)
+            {
+                cortaCaixa();
+            }
         }
     }
 
+    void cortaCaixa()
+    {
+        Destroy(gameObject);
+
+        textoCut.enabled = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (podeQuebrar==true && other.gameObject.CompareTag("Player"))
         {
             textoCut.enabled = true;
             objTriggado = true;
@@ -49,7 +59,7 @@ public class CutCaixa : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (podeQuebrar==true && other.gameObject.CompareTag("Player"))
         {
             textoCut.enabled = false;
             objTriggado = false;
