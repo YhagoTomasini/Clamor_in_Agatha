@@ -8,6 +8,7 @@ public class ShowCredits : MonoBehaviour
     public GameObject mainCanvas;
     public GameObject settingsCanvas;
     public GameObject controlsCanvas;
+    public GameObject playCanvas;
 
     // Método para abrir os créditos
     public void OpenCredits()
@@ -59,5 +60,21 @@ public class ShowCredits : MonoBehaviour
 
         // Desativa o Canvas dos créditos
         controlsCanvas.SetActive(false);
+    }
+     public void OpenPlay()
+    {
+        // Desativa o Canvas principal
+        mainCanvas.SetActive(false);
+
+        // Ativa o Canvas dos créditos
+        playCanvas.SetActive(true);
+    }
+     public void BackToMainMenu4()
+    {
+        // Ativa o Canvas principal
+        mainCanvas.SetActive(true);
+
+        // Desativa o Canvas dos créditos
+        playCanvas.SetActive(false);
     }
 }
