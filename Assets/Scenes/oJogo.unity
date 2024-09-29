@@ -4456,7 +4456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -18284,7 +18284,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2c3f00f4da072d44bfdde4558db63a5, type: 2}
+  - {fileID: 2100000, guid: 81b11883540c9cf41830cdbf9182697a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23150,6 +23150,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Agatha
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604920040608435517, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_Range
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604920040608435517, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2877353482647528162, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}

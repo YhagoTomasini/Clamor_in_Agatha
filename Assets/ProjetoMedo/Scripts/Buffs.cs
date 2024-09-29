@@ -47,22 +47,19 @@ public class Buffs : MonoBehaviour
 
         if (valorBarraAtual >= 2 && caixas.Length > 0)
             {
-                Debug.Log("feijao1");
+                //Debug.Log("feijao1");
                 foreach (GameObject caixa in caixas)
                 {
                     CutCaixa cutCaixas = caixa.GetComponent<CutCaixa>();
 
                     if (cutCaixas != null)
                     {
-                        Debug.Log("feijao2");
+                        //Debug.Log("feijao2");
                         cutCaixas.podeQuebrar = true;
                     }
                 }
 
-            //Se colidir com objeto invisivel de caixa;
                 //ativar objeto de aviso de ativacao
-                //Se apertar botao
-                    //funcao da caixa               
         }
         if (valorBarraAtual >= 5)
         {
