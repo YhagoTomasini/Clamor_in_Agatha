@@ -12,7 +12,10 @@ public class NavMeshTest : MonoBehaviour
     public void DestinoInimigo()
     {
         Debug.Log("pure");
-
-        meuAgente.SetDestination(destino.position);
+        while (true)
+        {
+            meuAgente.SetDestination(destino.position);
+        }
+        
     }
 }
