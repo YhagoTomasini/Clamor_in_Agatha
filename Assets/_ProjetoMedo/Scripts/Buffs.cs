@@ -27,12 +27,12 @@ public class Buffs : MonoBehaviour
             MeshRenderer buffRender = buffs.GetComponent<MeshRenderer>();
 
             buffRender.material.color = Color.red;
+
+            valorBarraAtual = 0;
+            rectBarra = barraCanva.GetComponent<RectTransform>();
+
+            progredirBarra();
         }
-
-        valorBarraAtual = 0;
-        rectBarra = barraCanva.GetComponent<RectTransform>();
-
-        progredirBarra();
     }
 
     void progredirBarra()
@@ -65,7 +65,7 @@ public class Buffs : MonoBehaviour
         
         if (valorBarraAtual >= 1 && caixas.Length > 0)
         {
-            //mudarCor();
+            mudarCor();
         }
         if (valorBarraAtual >= 2 && caixas.Length > 0)
             {
