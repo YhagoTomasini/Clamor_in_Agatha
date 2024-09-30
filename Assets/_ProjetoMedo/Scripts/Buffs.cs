@@ -13,8 +13,6 @@ public class Buffs : MonoBehaviour
     private float valorBarraAtual;
     private float valorBarraMax = 10;
 
-    //public Renderer buffRender;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +22,7 @@ public class Buffs : MonoBehaviour
         rectBarra = barraCanva.GetComponent<RectTransform>();
 
         progredirBarra();
+
     }
 
     void progredirBarra()
@@ -46,7 +45,9 @@ public class Buffs : MonoBehaviour
         
         if (valorBarraAtual >= 2 && caixas.Length > 0)
             {
-                //Debug.Log("feijao1");
+            //Debug.Log("feijao1");
+            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+
                 foreach (GameObject caixa in caixas)
                 {
                     CutCaixa cutCaixas = caixa.GetComponent<CutCaixa>();

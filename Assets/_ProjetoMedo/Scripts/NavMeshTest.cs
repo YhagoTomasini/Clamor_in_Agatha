@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class navmesTest : MonoBehaviour
+public class NavMeshTest : MonoBehaviour
 {
 
     public NavMeshAgent meuAgente;
-
     public Transform destino;
 
-    private void Start()
+    public void DestinoInimigo()
     {
+        Debug.Log("pure");
+
         meuAgente.SetDestination(destino.position);
     }
 }
