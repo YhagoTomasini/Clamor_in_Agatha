@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Buffs : MonoBehaviour
 {
-    //public GameObject orbsBuff;
+    public GameObject[] todosBuffs;
     public GameObject[] caixas;
 
     public GameObject barraCanva;
@@ -14,10 +14,20 @@ public class Buffs : MonoBehaviour
     private float valorBarraAtual;
     private float valorBarraMax = 10;
 
+    //public Renderer buffRender;
+
     // Start is called before the first frame update
     void Start()
     {
         caixas = GameObject.FindGameObjectsWithTag("Caixas");
+        todosBuffs = GameObject.FindGameObjectsWithTag("Buffs");
+
+        foreach (GameObject buffs in todosBuffs)
+        {
+            MeshRenderer buffRender = buffs.GetComponent<MeshRenderer>();
+
+            buffRender.material.color = Color.red;
+        }
 
         valorBarraAtual = 0;
         rectBarra = barraCanva.GetComponent<RectTransform>();
@@ -30,9 +40,16 @@ public class Buffs : MonoBehaviour
         valorbarraNor = valorBarraAtual / valorBarraMax;
         rectBarra.localScale = new Vector3(valorbarraNor, 1, 1);
     }
-    
-    // Update is called once per frame
-    void Update(){}
+
+    //void mudarCor()
+    //{
+    //    foreach (GameObject buffs in todosBuffs)
+    //    {
+    //        MeshRenderer buffRender = buffs.GetComponent<MeshRenderer>();
+
+    //        buffRender.material.color = Color.green;
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
@@ -45,6 +62,11 @@ public class Buffs : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        
+        if (valorBarraAtual >= 1 && caixas.Length > 0)
+        {
+            //mudarCor();
+        }
         if (valorBarraAtual >= 2 && caixas.Length > 0)
             {
                 //Debug.Log("feijao1");
