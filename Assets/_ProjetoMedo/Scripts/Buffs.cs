@@ -61,6 +61,17 @@ public class Buffs : MonoBehaviour
 
                 //ativar objeto de aviso de ativacao
         }
+
+        if (valorBarraAtual >= 3)
+        {
+            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+        }
+        if (valorBarraAtual >= 4)
+        {
+            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+        }
+
+
         if (valorBarraAtual >= 5)
         {
             //Aumentar barra de progressao.
