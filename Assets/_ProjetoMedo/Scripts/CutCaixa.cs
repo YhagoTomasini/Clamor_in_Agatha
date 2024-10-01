@@ -46,6 +46,8 @@ public class CutCaixa : MonoBehaviour
         Destroy(gameObject);
 
         textoCut.enabled = false;
+
+        GameObject.Find("NavMesh").GetComponent<NavMeshTest>().MeshBake();
     }
 
     private void OnTriggerEnter(Collider other)
