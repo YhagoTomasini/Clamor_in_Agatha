@@ -17,6 +17,7 @@ public class CutCaixa : MonoBehaviour
         if (textoCut == null)
         {
             GameObject cutTextObj = GameObject.Find("CutText");
+
             if (cutTextObj != null)
             {
                 textoCut = cutTextObj.GetComponent<TextMeshProUGUI>();

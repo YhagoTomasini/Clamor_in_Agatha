@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ondaCoisa : MonoBehaviour
 {
@@ -15,14 +16,21 @@ public class ondaCoisa : MonoBehaviour
     {
         Vector3 pposition = transform.position;
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            GameObject newOnda = Instantiate(onda, pposition, Quaternion.identity);
-
-            newOnda.transform.localScale = scaleOndaI;
-
-            StartCoroutine(CrescerAteMorrer(newOnda));
+            Andando();
         }
+    }
+
+    public void Andando()
+    {
+        Vector3 pposition = transform.position;
+
+        GameObject newOnda = Instantiate(onda, pposition, Quaternion.identity);
+
+        newOnda.transform.localScale = scaleOndaI;
+
+        StartCoroutine(CrescerAteMorrer(newOnda));
     }
 
     IEnumerator CrescerAteMorrer(GameObject objeto)

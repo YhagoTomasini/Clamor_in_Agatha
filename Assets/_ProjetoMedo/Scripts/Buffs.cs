@@ -33,9 +33,16 @@ public class Buffs : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //FUNCAO MORTE
+        //if (other.CompareTag("Dano"))
+        //{
+        //    Debug.Log("morra");
+        //    GameObject.Find("CanvaRestart").SetActive(true);
+        //}
+
+        //FUNCAO BUFFS
         if (other.CompareTag("Buffs"))
         {
-            //Debug.Log("arooz");
             valorBarraAtual += 1;
 
             progredirBarra();
@@ -45,8 +52,9 @@ public class Buffs : MonoBehaviour
         
         if (valorBarraAtual >= 2 && caixas.Length > 0)
             {
-            //Debug.Log("feijao1");
             GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+
+            //GameObject.Find("IconFaca").SetActive(true);
 
                 foreach (GameObject caixa in caixas)
                 {
@@ -54,7 +62,6 @@ public class Buffs : MonoBehaviour
 
                     if (cutCaixas != null)
                     {
-                        //Debug.Log("feijao2");
                         cutCaixas.podeQuebrar = true;
                     }
                 }
