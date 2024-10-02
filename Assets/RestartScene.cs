@@ -4,10 +4,18 @@ using UnityEngine.SceneManagement; // Necessário para trabalhar com o SceneMana
 public class SceneReloader : MonoBehaviour
 {
     // Função que reinicia a cena atual
+  
     public void RestartScene()
     {
-        // Obtém o nome da cena ativa e recarrega
+     
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartScene();
+        }
     }
 }
