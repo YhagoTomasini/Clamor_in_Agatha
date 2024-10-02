@@ -9,4 +9,9 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("oJogo"); // Troca para a cena especificada
         Debug.Log("Deus");
     }
+    public void ChangeScene2(string UiGame)
+    {
+        SceneManager.LoadScene("UiGame"); // Troca para a cena especificada
+        Debug.Log("Endeuzado");
+    }
 }
