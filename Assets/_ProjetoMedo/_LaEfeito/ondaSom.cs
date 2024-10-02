@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TesteOnda : MonoBehaviour
+public class ondaSom : MonoBehaviour
 {
     public GameObject onda;
 
