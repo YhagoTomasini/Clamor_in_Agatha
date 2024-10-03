@@ -7,11 +7,12 @@ public class CutCaixa : MonoBehaviour
 {
     public TextMeshProUGUI textoCut;
     private bool objTriggado;
-
     public bool podeQuebrar;
+
 
     void Start()
     {
+
         podeQuebrar = false;
         
         if (textoCut == null)
@@ -42,13 +43,11 @@ public class CutCaixa : MonoBehaviour
         }
     }
 
-    void cortaCaixa()
+    public void cortaCaixa()
     {
         Destroy(gameObject);
 
         textoCut.enabled = false;
-
-        GameObject.Find("NavMesh").GetComponent<NavMeshTest>().MeshBake();
     }
 
     private void OnTriggerEnter(Collider other)

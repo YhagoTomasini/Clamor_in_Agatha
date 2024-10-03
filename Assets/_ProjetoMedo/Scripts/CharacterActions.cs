@@ -10,7 +10,7 @@ public class CharacterActs : MonoBehaviour
     public GameObject barraCanva;
     public RectTransform rectBarra;
     public float valorbarraNor;
-    private float valorBarraAtual;
+    public float valorBarraAtual;
     private float valorBarraMax = 10;
 
     public GameObject canvaMorte;
@@ -52,6 +52,9 @@ public class CharacterActs : MonoBehaviour
         if (other.CompareTag("Dano"))
         {
             Debug.Log("morra");
+            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+
+
             canvaMorte.SetActive(true);
             canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
         }
@@ -83,13 +86,13 @@ public class CharacterActs : MonoBehaviour
             }
         }
 
-        if (valorBarraAtual >= 3)
+        if (valorBarraAtual == 4)
         {
-            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
-        }
-        if (valorBarraAtual >= 4)
-        {
-            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+            Debug.Log("final");
+
+            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+            canvaMorte.SetActive(true);
+            canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
         }
 
 

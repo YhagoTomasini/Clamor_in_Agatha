@@ -11,17 +11,16 @@ public class NavMeshTest : MonoBehaviour
     public Transform destino;
     public Vector3 destinoAtual;
 
-    private NavMeshSurface navMeshSurface;
-
     public bool andando = false;
     public GameObject luzInim;
 
     private void Start()
     {
+
         luzInim = GameObject.Find("LuzInim");
         luzInim.SetActive(false);
 
-        StartCoroutine(AndaleAndale());
+        //StartCoroutine(AndaleAndale());
     }
 
     IEnumerator AndaleAndale()
@@ -50,12 +49,6 @@ public class NavMeshTest : MonoBehaviour
             andando = false;
             luzInim.SetActive(false);
         }
-    }
-
-    public void MeshBake()
-    {
-        navMeshSurface = GetComponent<NavMeshSurface>();
-        navMeshSurface.BuildNavMesh();
     }
 
     IEnumerator AtivarPassos()
