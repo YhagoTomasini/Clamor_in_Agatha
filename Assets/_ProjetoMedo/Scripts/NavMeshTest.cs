@@ -14,15 +14,30 @@ public class NavMeshTest : MonoBehaviour
     private NavMeshSurface navMeshSurface;
 
     public bool andando = false;
+    public GameObject luzInim;
 
+    private void Start()
+    {
+        luzInim = GameObject.Find("LuzInim");
+        luzInim.SetActive(false);
 
+        StartCoroutine(AndaleAndale());
+    }
+
+    IEnumerator AndaleAndale()
+    {
+        while (true)
+        {
+            DestinoInimigo();
+
+            yield return new WaitForSeconds(4f);
+        }
+    }
     public void DestinoInimigo()
     {
-        //Debug.Log("pure");
         meuAgente.SetDestination(destinoAtual);
 
         andando = true;
-        //GameObject.Find("LuzInim").SetActive(true);
         StartCoroutine(AtivarPassos());
     }
 
@@ -33,8 +48,7 @@ public class NavMeshTest : MonoBehaviour
         if(meuAgente.GetComponent<Transform>().position == destinoAtual)
         {
             andando = false;
-            //GameObject.Find("LuzInim").SetActive(false);
-
+            luzInim.SetActive(false);
         }
     }
 
@@ -46,10 +60,12 @@ public class NavMeshTest : MonoBehaviour
 
     IEnumerator AtivarPassos()
     {
+        luzInim.SetActive(true);
+
         while (andando)
         {
             GameObject.Find("Inimigo").GetComponent<ondaCoisa>().Andando();
-            Debug.Log("Fernando");
+            //Debug.Log("Fernando");
 
             yield return new WaitForSeconds(4f);
         }

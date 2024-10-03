@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Buffs : MonoBehaviour
+public class CharacterActs : MonoBehaviour
 {
     public GameObject[] caixas;
 
@@ -13,9 +13,24 @@ public class Buffs : MonoBehaviour
     private float valorBarraAtual;
     private float valorBarraMax = 10;
 
-    // Start is called before the first frame update
+    public GameObject canvaMorte;
+    public GameObject iconFaca;
+    public GameObject iconPulo;
+    public GameObject iconShrek;
+
     void Start()
     {
+        canvaMorte = GameObject.Find("CanvasRestart");
+        iconFaca = GameObject.Find("IconFaca");
+        iconPulo = GameObject.Find("IconPulo");
+        iconShrek = GameObject.Find("IconShrek");
+
+        canvaMorte.SetActive(false);
+        iconFaca.SetActive(false);
+        iconPulo.SetActive(false); 
+        iconShrek.SetActive(false);
+
+
         caixas = GameObject.FindGameObjectsWithTag("Caixas");
         
         valorBarraAtual = 0;
@@ -34,11 +49,12 @@ public class Buffs : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //FUNCAO MORTE
-        //if (other.CompareTag("Dano"))
-        //{
-        //    Debug.Log("morra");
-        //    GameObject.Find("CanvaRestart").SetActive(true);
-        //}
+        if (other.CompareTag("Dano"))
+        {
+            Debug.Log("morra");
+            canvaMorte.SetActive(true);
+            canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
+        }
 
         //FUNCAO BUFFS
         if (other.CompareTag("Buffs"))
@@ -54,19 +70,17 @@ public class Buffs : MonoBehaviour
             {
             GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
 
-            //GameObject.Find("IconFaca").SetActive(true);
+            iconFaca.SetActive(true);
 
-                foreach (GameObject caixa in caixas)
+            foreach (GameObject caixa in caixas)
+            {
+                CutCaixa cutCaixas = caixa.GetComponent<CutCaixa>();
+
+                if (cutCaixas != null)
                 {
-                    CutCaixa cutCaixas = caixa.GetComponent<CutCaixa>();
-
-                    if (cutCaixas != null)
-                    {
-                        cutCaixas.podeQuebrar = true;
-                    }
+                    cutCaixas.podeQuebrar = true;
                 }
-
-                //ativar objeto de aviso de ativacao
+            }
         }
 
         if (valorBarraAtual >= 3)

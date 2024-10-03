@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5879460230374456597}
   - component: {fileID: 1612282922393100791}
   - component: {fileID: 3969794972494967426}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 8920832925423266606}
   - component: {fileID: 5360985268199659636}
   - component: {fileID: 2553429304858552394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CaixaPapel
   m_TagString: Caixas
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 5477610492067199222}
   - component: {fileID: 4286230627109769631}
   - component: {fileID: 3288087110460142852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

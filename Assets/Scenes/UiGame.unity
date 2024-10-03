@@ -1850,9 +1850,9 @@ RectTransform:
   - {fileID: 2141371340}
   m_Father: {fileID: 1187382551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -503.32974}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &583021825
@@ -2450,13 +2450,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 99d56ac44aaf04710a4d038acaf7829e, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2081836299}
+        m_TargetAssemblyTypeName: MenuERestart, Assembly-CSharp
+        m_MethodName: CenaJogo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2534,9 +2534,9 @@ RectTransform:
   - {fileID: 159551206}
   m_Father: {fileID: 1187382551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -259.16486}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717632744
@@ -3343,9 +3343,9 @@ RectTransform:
   - {fileID: 30436756}
   m_Father: {fileID: 1187382551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -137.08243}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114268133
@@ -3610,9 +3610,9 @@ RectTransform:
   - {fileID: 1593981678}
   m_Father: {fileID: 1187382551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157121265
@@ -3900,7 +3900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1328302407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4934,9 +4934,9 @@ RectTransform:
   - {fileID: 858984925}
   m_Father: {fileID: 1187382551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -381.2473}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670647233
@@ -5311,9 +5311,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2081836299}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: MenuERestart, Assembly-CSharp
+        m_MethodName: CenaJogo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6449,6 +6449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4602772819828213986, guid: dcf1c83d8133d468081dadb44d32caf5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6632418138306702931, guid: dcf1c83d8133d468081dadb44d32caf5,
         type: 3}
       propertyPath: pauseMenu
@@ -6560,7 +6565,12 @@ PrefabInstance:
     - target: {fileID: 1998717406929002687, guid: 380084fc03e8e4ff684b7f11085e8f14,
         type: 3}
       propertyPath: m_Name
-      value: Canvas Restart
+      value: CanvasRestart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998717406929002687, guid: 380084fc03e8e4ff684b7f11085e8f14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6853139677205207657, guid: 380084fc03e8e4ff684b7f11085e8f14,
         type: 3}
@@ -6770,6 +6780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653464961741091759, guid: 10d35f0c8a5f24b5a8066cb85b1a1905,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

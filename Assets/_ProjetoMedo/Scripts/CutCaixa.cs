@@ -33,7 +33,7 @@ public class CutCaixa : MonoBehaviour
 
     void Update()
     {
-        if (objTriggado && Input.GetKeyDown(KeyCode.Space))
+        if (objTriggado && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (podeQuebrar==true)
             {

@@ -705,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 23
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -1111,6 +1111,10 @@ MonoBehaviour:
   barraCanva: {fileID: 0}
   rectBarra: {fileID: 0}
   valorbarraNor: 0
+  canvaMorte: {fileID: 0}
+  iconFaca: {fileID: 0}
+  iconPulo: {fileID: 0}
+  iconShrek: {fileID: 0}
 --- !u!4 &6076587712813273000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
