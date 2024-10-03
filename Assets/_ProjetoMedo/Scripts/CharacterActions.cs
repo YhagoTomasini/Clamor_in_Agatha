@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -51,12 +52,7 @@ public class CharacterActs : MonoBehaviour
         //FUNCAO MORTE
         if (other.CompareTag("Dano"))
         {
-            Debug.Log("morra");
-            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
-
-
-            canvaMorte.SetActive(true);
-            canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
+            AcabarJogo();
         }
 
         //FUNCAO BUFFS
@@ -88,11 +84,7 @@ public class CharacterActs : MonoBehaviour
 
         if (valorBarraAtual == 4)
         {
-            Debug.Log("final");
-
-            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
-            canvaMorte.SetActive(true);
-            canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
+            AcabarJogo();
         }
 
 
@@ -117,6 +109,15 @@ public class CharacterActs : MonoBehaviour
                 //Se apertar botao
                     //funcao de shrink  
 
-        }
+        } 
+    }
+
+    public void AcabarJogo()
+    {
+            Debug.Log("final");
+
+            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+            canvaMorte.SetActive(true);
+            canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
     }
 }

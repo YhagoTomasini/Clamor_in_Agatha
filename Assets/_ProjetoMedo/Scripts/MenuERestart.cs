@@ -19,11 +19,21 @@ public class MenuERestart : MonoBehaviour
 
     public void CenaUi()
     {
+        if(clicarMouse)
+        {
+            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+        }
+
         Debug.Log("Carregando cena UiGame");
         SceneManager.LoadScene("UiGame");
     }
     public void CenaJogo()
     {
+        if(clicarMouse)
+        {
+            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+        }
+
         Debug.Log("Carregando cena oJogo");
         SceneManager.LoadScene("oJogo");
     }
