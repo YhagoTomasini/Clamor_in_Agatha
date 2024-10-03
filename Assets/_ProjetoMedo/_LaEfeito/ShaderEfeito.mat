@@ -127,7 +127,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Intercecao: 0.78
-    - _IntercecaoEfeito: 0.75
+    - _IntercecaoEfeito: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
