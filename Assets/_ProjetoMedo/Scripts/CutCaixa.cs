@@ -45,9 +45,10 @@ public class CutCaixa : MonoBehaviour
 
     public void cortaCaixa()
     {
-        Destroy(gameObject);
-
         textoCut.enabled = false;
+
+        Destroy(gameObject);
+        
     }
 
     private void OnTriggerEnter(Collider other)

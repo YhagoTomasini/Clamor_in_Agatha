@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 public class CharacterActs : MonoBehaviour
 {
-    public GameObject[] caixas;
+    //public GameObject[] caixas;
+
+    public GameObject caixas;
 
     public GameObject barraCanva;
     public RectTransform rectBarra;
@@ -38,7 +40,7 @@ public class CharacterActs : MonoBehaviour
         iconShrek.SetActive(false);
 
 
-        caixas = GameObject.FindGameObjectsWithTag("Caixas");
+        //caixas = GameObject.FindGameObjectsWithTag("Caixas");
         
         valorBarraAtual = 0;
         rectBarra = barraCanva.GetComponent<RectTransform>();
@@ -58,22 +60,31 @@ public class CharacterActs : MonoBehaviour
         whiteBlur.gameObject.SetActive(true);
         Color blurColor = whiteBlur.color;
 
-        blurColor.a = 0.3f;
         whiteBlur.color = blurColor;
 
         float duracao = 0f;
+        //while (duracao < duracaoFade)
+        //{
+        //    blurColor.a = Mathf.Lerp(0f, 1f, duracao / duracaoFade);
+        //    whiteBlur.color = blurColor;
+        //    duracao += Time.deltaTime;
 
+        //    yield return null;
+        //}
+
+        //blurColor.a = 0f;
+        //whiteBlur.color = blurColor;
+
+        //duracao = 0;
         while (duracao < duracaoFade)
         {
-            blurColor.a = Mathf.Lerp(0.3f, 0f, duracao / duracaoFade);
+            blurColor.a = Mathf.Lerp(1f, 0f, duracao / duracaoFade);
             whiteBlur.color = blurColor;
             duracao += Time.deltaTime;
 
             yield return null;
         }
 
-        blurColor.a = 0f;
-        whiteBlur.color = blurColor;
         whiteBlur.gameObject.SetActive(false);
     }
 
@@ -91,8 +102,7 @@ public class CharacterActs : MonoBehaviour
             valorBarraAtual += 1;
 
             progredirBarra();
-            //Acessar componente de global volume e colocar gama para 2 e diminuir eponenciamentepara 1
-            StartCoroutine (EfeitoBuff(0.5f));
+            StartCoroutine (EfeitoBuff(1f));
 
             if (other != null)
             {
@@ -101,19 +111,25 @@ public class CharacterActs : MonoBehaviour
         }
 
 
-        if (valorBarraAtual >= 2 && caixas.Length > 0)
-            {
+        // if (valorBarraAtual >= 2 && caixas.Length > 0)
+        if (valorBarraAtual >= 2 && caixas!=null)
+        {
             GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
 
             iconFaca.SetActive(true);
 
-            foreach (GameObject caixa in caixas)
+            if (caixas != null)
             {
-                CutCaixa cutCaixas = caixa.GetComponent<CutCaixa>();
+                // foreach (GameObject caixa in caixas)
+                foreach (Transform child in caixas.transform)
 
-                if (cutCaixas != null)
                 {
-                    cutCaixas.podeQuebrar = true;
+                    CutCaixa cutCaixas = child.GetComponent<CutCaixa>();
+
+                    if (cutCaixas != null)
+                    {
+                        cutCaixas.podeQuebrar = true;
+                    }
                 }
             }
         }
