@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ondaSom : MonoBehaviour
 {
@@ -11,6 +12,16 @@ public class ondaSom : MonoBehaviour
 
     public float scaleVelo = 2f;
 
+    private void Start()
+    {
+        Vector3 pposition = transform.position;
+
+        GameObject newOnda = Instantiate(onda, pposition, Quaternion.identity);
+
+        newOnda.transform.localScale = scaleOndaI;
+
+        StartCoroutine(CrescerAteMorrer(newOnda));
+    }
     void Update()
     {
         Vector3 pposition = transform.position;
