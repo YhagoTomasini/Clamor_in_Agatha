@@ -8,6 +8,7 @@ TagManager:
   - Buffs
   - Caixas
   - Dano
+  - AlcancePulo
   layers:
   - Default
   - TransparentFX
