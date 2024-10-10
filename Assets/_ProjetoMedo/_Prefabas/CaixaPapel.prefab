@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5879460230374456597}
   - component: {fileID: 1612282922393100791}
   - component: {fileID: 3969794972494967426}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,8 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5097845bc56ef45c79a52bcacb8a3da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 8442111559707256561, guid: 8e05e12650113425792fec721cb4e2c8,
-    type: 3}
+  mainCamera: {fileID: 0}
 --- !u!1 &760146443294603213
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +199,8 @@ GameObject:
   - component: {fileID: 8920832925423266606}
   - component: {fileID: 5360985268199659636}
   - component: {fileID: 2553429304858552394}
-  m_Layer: 3
+  - component: {fileID: 1038407800392965315}
+  m_Layer: 0
   m_Name: CaixaPapel
   m_TagString: Caixas
   m_Icon: {fileID: 0}
@@ -308,6 +308,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoCut: {fileID: 0}
   podeQuebrar: 0
+--- !u!208 &1038407800392965315
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760146443294603213}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1092411554126705493
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +336,7 @@ GameObject:
   - component: {fileID: 5477610492067199222}
   - component: {fileID: 4286230627109769631}
   - component: {fileID: 3288087110460142852}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

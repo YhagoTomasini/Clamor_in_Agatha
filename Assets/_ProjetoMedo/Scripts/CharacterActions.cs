@@ -10,6 +10,7 @@ public class CharacterActs : MonoBehaviour
     //public GameObject[] caixas;
 
     public GameObject caixas;
+    public GameObject pulos;
 
     public GameObject barraCanva;
     public RectTransform rectBarra;
@@ -26,7 +27,6 @@ public class CharacterActs : MonoBehaviour
 
     void Start()
     {
-        //whiteBlur = GameObject.Find("WBlurTex");
         whiteBlur.gameObject.SetActive(false);
 
         canvaMorte = GameObject.Find("CanvasRestart");
@@ -63,19 +63,6 @@ public class CharacterActs : MonoBehaviour
         whiteBlur.color = blurColor;
 
         float duracao = 0f;
-        //while (duracao < duracaoFade)
-        //{
-        //    blurColor.a = Mathf.Lerp(0f, 1f, duracao / duracaoFade);
-        //    whiteBlur.color = blurColor;
-        //    duracao += Time.deltaTime;
-
-        //    yield return null;
-        //}
-
-        //blurColor.a = 0f;
-        //whiteBlur.color = blurColor;
-
-        //duracao = 0;
         while (duracao < duracaoFade)
         {
             blurColor.a = Mathf.Lerp(1f, 0f, duracao / duracaoFade);
@@ -136,7 +123,22 @@ public class CharacterActs : MonoBehaviour
 
         if (valorBarraAtual == 4)
         {
-            AcabarJogo();
+            iconPulo.SetActive(true);
+
+
+            if (pulos != null)
+            {
+                foreach (Transform child in pulos.transform)
+
+                {
+                    JumpUp jumpUp = child.GetComponent<JumpUp>();
+
+                    if (jumpUp != null)
+                    {
+                        jumpUp.podePular = true;
+                    }
+                }
+            }
         }
 
 
