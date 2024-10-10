@@ -10,13 +10,14 @@ public class JumpUp : MonoBehaviour
     public bool podePular;
     public float jumpForce = 10f;
 
-    public Transform Character;
-    private Rigidbody rb;
+    public GameObject character;
+    public GameObject posiPulo;
+
+    public GameObject playerCapsuleToTeleport;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
+         playerCapsuleToTeleport = GameObject.Find("PlayerCapsule");
         podePular = false;
         
         if (textoJump == null)
@@ -42,28 +43,30 @@ public class JumpUp : MonoBehaviour
         {
             if (podePular==true)
             {
-                pularPraCima();
+                StartCoroutine(teleportAction());
+               // pularPraCima();
+                
             }
         }
     }
 
     public void pularPraCima()
     {
-        textoJump.enabled = false;
-
-        // Calcular a direção para o alvo
-        Vector3 direction = Character.position - transform.position;
-        direction.y = 0;
-
-        // Calcular a velocidade inicial
-        float distance = direction.magnitude;
-        float angle = 45f;
-        float velocity = Mathf.Sqrt(distance * Physics.gravity.magnitude / Mathf.Sin(2 * Mathf.Deg2Rad * angle));
-
-        // Aplicar a força inicial
-        rb.velocity = velocity * direction.normalized;
+        character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
+        
+        Debug.Log("trigodopulo");
     }
 
+
+IEnumerator teleportAction(){
+playerCapsuleToTeleport.SetActive(false);
+   yield return new  WaitForSeconds(0.5f);
+   character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
+     yield return new  WaitForSeconds(0.5f);
+     playerCapsuleToTeleport.SetActive(true);
+
+ //  
+}
     private void OnTriggerEnter(Collider other)
     {
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
