@@ -6,7 +6,7 @@ public class SceneReloader : MonoBehaviour
   
     public void RestartScene()
     {
-     
+        //GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();   
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }

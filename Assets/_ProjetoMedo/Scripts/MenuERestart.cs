@@ -3,23 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class MenuERestart : MonoBehaviour
 {
-    public bool clicarMouse = false;
-    private void Update()
-    {
-        if (clicarMouse && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            CenaUi();
-        }
+    // public bool clicarMouse = false;
+    // private void Update()
+    // {
+    //     if (clicarMouse && Input.GetKeyDown(KeyCode.Mouse0))
+    //     {
+    //         CenaUi();
+    //     }
 
-        if (clicarMouse && Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            CenaJogo();
-        }
-    }
+    //     if (clicarMouse && Input.GetKeyDown(KeyCode.Mouse1))
+    //     {
+    //         CenaJogo();
+    //     }
+    // }
 
     public void CenaUi()
     {
-        if(clicarMouse)
+        // if(clicarMouse)
         {
             GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
         }
@@ -29,7 +29,7 @@ public class MenuERestart : MonoBehaviour
     }
     public void CenaJogo()
     {
-        if(clicarMouse)
+        // if(clicarMouse)
         {
             GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
         }
@@ -38,8 +38,5 @@ public class MenuERestart : MonoBehaviour
         SceneManager.LoadScene("oJogo");
     }
 
-    public void AtivarMouse()
-    {
-        clicarMouse = true;
-    }
+   
 }
