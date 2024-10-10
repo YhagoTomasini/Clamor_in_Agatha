@@ -166,12 +166,13 @@ public class CharacterActs : MonoBehaviour
         } 
     }
 
+   
     public void AcabarJogo()
     {
             Debug.Log("final");
 
-            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+            //GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
             canvaMorte.SetActive(true);
-            canvaMorte.GetComponent<MenuERestart>().AtivarMouse();
+            Cursor.lockState = CursorLockMode.None;
     }
 }
