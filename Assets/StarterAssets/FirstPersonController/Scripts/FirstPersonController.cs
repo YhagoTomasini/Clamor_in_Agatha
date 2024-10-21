@@ -115,9 +115,11 @@ namespace StarterAssets
 			//JumpAndGravity();
 			GroundedCheck();
 			Move();
-		}
+			ApplyGravity();
 
-		private void LateUpdate()
+        }
+
+        private void LateUpdate()
 		{
 			CameraRotation();
 		}
@@ -151,7 +153,32 @@ namespace StarterAssets
 			}
 		}
 
-		private void Move()
+
+        private void ApplyGravity()
+        {
+            // Verifica se o personagem está no chão
+            if (Grounded)
+            {
+                // Resetar a velocidade vertical se estiver no chão
+                if (_verticalVelocity < 0.0f)
+                {
+                    _verticalVelocity = -2f;  // Pequeno valor para manter o personagem "preso" ao chão
+                }
+            }
+            else
+            {
+                // Aplicar gravidade quando não está no chão
+                _verticalVelocity += Physics.gravity.y * Time.deltaTime;
+
+                // Limitar a velocidade vertical para não cair muito rápido
+                if (_verticalVelocity < -_terminalVelocity)
+                {
+                    _verticalVelocity = -_terminalVelocity;
+                }
+            }
+        }
+
+        private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
 			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
