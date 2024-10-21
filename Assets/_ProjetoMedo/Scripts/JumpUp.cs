@@ -44,7 +44,7 @@ public class JumpUp : MonoBehaviour
             if (podePular==true)
             {
                 StartCoroutine(teleportAction());
-               // pularPraCima();
+                pularPraCima();
                 
             }
         }
@@ -58,15 +58,15 @@ public class JumpUp : MonoBehaviour
     }
 
 
-IEnumerator teleportAction(){
-playerCapsuleToTeleport.SetActive(false);
-   yield return new  WaitForSeconds(0.5f);
-   character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
-     yield return new  WaitForSeconds(0.5f);
-     playerCapsuleToTeleport.SetActive(true);
+    IEnumerator teleportAction()
+    {
+        playerCapsuleToTeleport.SetActive(false);
+        yield return new  WaitForSeconds(0.5f);
+        character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
+        yield return new  WaitForSeconds(0.5f);
+        playerCapsuleToTeleport.SetActive(true);
+    }
 
- //  
-}
     private void OnTriggerEnter(Collider other)
     {
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
