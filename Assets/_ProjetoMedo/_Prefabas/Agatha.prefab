@@ -259,6 +259,8 @@ GameObject:
   - component: {fileID: 1919232050834503411}
   - component: {fileID: 2741606188404583048}
   - component: {fileID: 1919232050834503416}
+  - component: {fileID: 7077796653401628121}
+  - component: {fileID: 8976485276486609298}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -453,6 +455,56 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7077796653401628121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919232050834503412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8b775e556452942bd831b105e3ebec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caixas: {fileID: 0}
+  pulos: {fileID: 0}
+  barraCanva: {fileID: 0}
+  rectBarra: {fileID: 0}
+  valorbarraNor: 0
+  valorBarraAtual: 0
+  whiteBlur: {fileID: 0}
+  canvaMorte: {fileID: 0}
+  iconFaca: {fileID: 0}
+  iconPulo: {fileID: 0}
+  iconShrek: {fileID: 0}
+--- !u!54 &8976485276486609298
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919232050834503412}
+  serializedVersion: 4
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1 &2055201979370346788
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +720,6 @@ GameObject:
   - component: {fileID: 2877353482647528175}
   - component: {fileID: 2877353482647528160}
   - component: {fileID: 4515412359486426704}
-  - component: {fileID: 4329767962925654235}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -759,7 +810,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1
   m_Height: 2
@@ -772,7 +823,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2877353482647528162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c8b775e556452942bd831b105e3ebec, type: 3}
   m_Name: 
@@ -788,33 +839,6 @@ MonoBehaviour:
   iconFaca: {fileID: 0}
   iconPulo: {fileID: 0}
   iconShrek: {fileID: 0}
---- !u!54 &4329767962925654235
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2877353482647528162}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 0
 --- !u!1 &2889754803337036449
 GameObject:
   m_ObjectHideFlags: 0

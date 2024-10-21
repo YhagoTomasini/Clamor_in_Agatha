@@ -25,6 +25,8 @@ public class CharacterActs : MonoBehaviour
     public GameObject iconPulo;
     public GameObject iconShrek;
 
+    private bool podeSeguir;
+
     void Start()
     {
         whiteBlur.gameObject.SetActive(false);
@@ -39,6 +41,7 @@ public class CharacterActs : MonoBehaviour
         iconPulo.SetActive(false); 
         iconShrek.SetActive(false);
 
+        podeSeguir = false;
 
         //caixas = GameObject.FindGameObjectsWithTag("Caixas");
         
@@ -100,7 +103,15 @@ public class CharacterActs : MonoBehaviour
 
         if (valorBarraAtual >= 2 && caixas!=null)
         {
-            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+            if (valorBarraAtual == 2)
+            {
+                podeSeguir = true;
+            }
+            if (podeSeguir)
+            {
+                GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+                podeSeguir = false;
+            }
 
             iconFaca.SetActive(true);
 

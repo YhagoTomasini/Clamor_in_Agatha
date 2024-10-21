@@ -44,18 +44,17 @@ public class JumpUp : MonoBehaviour
             if (podePular==true)
             {
                 StartCoroutine(teleportAction());
-                pularPraCima();
-                
+                //pularPraCima();
             }
         }
     }
 
-    public void pularPraCima()
-    {
-        character.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
+    //public void pularPraCima()
+    //{
+    //    character.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
         
-        Debug.Log("trigodopulo");
-    }
+    //    Debug.Log("trigodopulo");
+    //}
 
 
     IEnumerator teleportAction()

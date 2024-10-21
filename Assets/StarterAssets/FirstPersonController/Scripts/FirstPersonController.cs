@@ -162,7 +162,7 @@ namespace StarterAssets
                 // Resetar a velocidade vertical se estiver no chão
                 if (_verticalVelocity < 0.0f)
                 {
-                    _verticalVelocity = -2f;  // Pequeno valor para manter o personagem "preso" ao chão
+                    _verticalVelocity = -.5f;  // Pequeno valor para manter o personagem "preso" ao chão
                 }
             }
             else

@@ -39,6 +39,7 @@ public class CutCaixa : MonoBehaviour
             if (podeQuebrar==true)
             {
                 cortaCaixa();
+                GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
             }
         }
     }
