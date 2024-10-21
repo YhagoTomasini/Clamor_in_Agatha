@@ -307,7 +307,7 @@ CharacterController:
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.93, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1919232050834503411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ Transform:
   m_GameObject: {fileID: 2877353482647528162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -934,7 +934,7 @@ Transform:
   m_GameObject: {fileID: 4734122255732858545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.88750005, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22750002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1110,7 +1110,6 @@ GameObject:
   - component: {fileID: 4685551085546657385}
   - component: {fileID: 8693404274257010037}
   - component: {fileID: 4996920928092025031}
-  - component: {fileID: 2899771696356341433}
   - component: {fileID: 278396047349179086}
   m_Layer: 0
   m_Name: AlcanceDoPulo
@@ -1205,24 +1204,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2899771696356341433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4887456993488935074}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ac369634d0c8b4da1ea4332ab468f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoJump: {fileID: 0}
-  podePular: 1
-  jumpForce: 10
-  character: {fileID: 0}
-  posiPulo: {fileID: 0}
-  playerCapsuleToTeleport: {fileID: 0}
 --- !u!54 &278396047349179086
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1363,7 +1344,7 @@ Transform:
   m_GameObject: {fileID: 5027877311856701499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.88750005, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22750002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
