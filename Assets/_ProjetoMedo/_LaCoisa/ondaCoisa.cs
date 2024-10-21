@@ -6,11 +6,13 @@ using UnityEngine.UIElements;
 public class ondaCoisa : MonoBehaviour
 {
     public GameObject onda;
+    public GameObject luz;
 
     public Vector3 scaleOndaI = new Vector3(2f, 2f, 2f);
     public Vector3 scaleOndaF = new Vector3(20f, 20f, 20f);
 
     public float scaleVelo = 2f;
+
 
     void Update()
     {
@@ -33,18 +35,21 @@ public class ondaCoisa : MonoBehaviour
         StartCoroutine(CrescerAteMorrer(newOnda));
     }
 
-    IEnumerator CrescerAteMorrer(GameObject objeto)
+    IEnumerator CrescerAteMorrer(GameObject efeito)
     {
         float tempo = 0f;
+        Light luzComponent = luz.GetComponent<Light>();
 
         while (tempo<scaleVelo)
         {
             tempo += Time.deltaTime;
 
-            objeto.transform.localScale = Vector3.Lerp(scaleOndaI, scaleOndaF, tempo / scaleVelo);
+            luzComponent.range = Mathf.Lerp(0, 14, tempo / scaleVelo);
+            efeito.transform.localScale = Vector3.Lerp(scaleOndaI, scaleOndaF, tempo / scaleVelo);
 
             yield return null;
         }
-        Destroy (objeto);
+        Destroy (efeito);
+        luzComponent.range = 0;
     }
 }

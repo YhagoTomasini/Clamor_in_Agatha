@@ -17,7 +17,7 @@ public class JumpUp : MonoBehaviour
 
     void Start()
     {
-         playerCapsuleToTeleport = GameObject.Find("PlayerCapsule");
+        playerCapsuleToTeleport = GameObject.Find("PlayerCapsule");
         podePular = false;
         
         if (textoJump == null)
@@ -52,7 +52,7 @@ public class JumpUp : MonoBehaviour
 
     public void pularPraCima()
     {
-        character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
+        character.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
         
         Debug.Log("trigodopulo");
     }

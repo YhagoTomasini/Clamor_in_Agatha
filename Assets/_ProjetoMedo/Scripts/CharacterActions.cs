@@ -98,7 +98,6 @@ public class CharacterActs : MonoBehaviour
         }
 
 
-        // if (valorBarraAtual >= 2 && caixas.Length > 0)
         if (valorBarraAtual >= 2 && caixas!=null)
         {
             GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
@@ -107,9 +106,7 @@ public class CharacterActs : MonoBehaviour
 
             if (caixas != null)
             {
-                // foreach (GameObject caixa in caixas)
                 foreach (Transform child in caixas.transform)
-
                 {
                     CutCaixa cutCaixas = child.GetComponent<CutCaixa>();
 
@@ -121,15 +118,13 @@ public class CharacterActs : MonoBehaviour
             }
         }
 
-        if (valorBarraAtual == 4)
+        if (valorBarraAtual >= 3 && pulos != null)
         {
             iconPulo.SetActive(true);
 
-
             if (pulos != null)
-            {
+            { 
                 foreach (Transform child in pulos.transform)
-
                 {
                     JumpUp jumpUp = child.GetComponent<JumpUp>();
 
@@ -142,17 +137,6 @@ public class CharacterActs : MonoBehaviour
         }
 
 
-        if (valorBarraAtual >= 5)
-        {
-            //Aumentar barra de progressao.
-            //Ativar buff de pular.
-
-            //Se colidir com objeto invisivel de altonivel;
-                //ativar objeto de aviso de ativacao
-                //Se apertar botao
-                    //funcao de pulo  
-
-        }
         if (valorBarraAtual >= 9)
         {
             //Aumentar barra de progressao.
