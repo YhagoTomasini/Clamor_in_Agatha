@@ -173,7 +173,7 @@ namespace StarterAssets
                 // Limitar a velocidade vertical para não cair muito rápido
                 if (_verticalVelocity < -_terminalVelocity)
                 {
-                    _verticalVelocity = -_terminalVelocity;
+                    _verticalVelocity = -_terminalVelocity * 0.2f;
                 }
             }
         }
