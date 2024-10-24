@@ -15,6 +15,9 @@ public class JumpUp : MonoBehaviour
 
     public GameObject playerCapsuleToTeleport;
 
+    //public Collider coAtual;
+    //public Collider coVisao;
+
     void Start()
     {
         playerCapsuleToTeleport = GameObject.Find("PlayerCapsule");
@@ -44,25 +47,23 @@ public class JumpUp : MonoBehaviour
             if (podePular==true)
             {
                 StartCoroutine(teleportAction());
-                //pularPraCima();
             }
         }
     }
-
-    //public void pularPraCima()
-    //{
-    //    character.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
-        
-    //    Debug.Log("trigodopulo");
-    //}
 
 
     IEnumerator teleportAction()
     {
         playerCapsuleToTeleport.SetActive(false);
+        //coAtual = null;
+        //coVisao = null;
+
         yield return new  WaitForSeconds(0.5f);
+
+        //coAtual = coVisao;
         character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
         yield return new  WaitForSeconds(0.5f);
+
         playerCapsuleToTeleport.SetActive(true);
     }
 
@@ -70,8 +71,13 @@ public class JumpUp : MonoBehaviour
     {
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
         {
+
             textoJump.enabled = true;
             objTriggado = true;
+            //if (coAtual != other)
+            {
+                //coVisao = other;
+            }
         }
     }
 
@@ -81,6 +87,7 @@ public class JumpUp : MonoBehaviour
         {
             textoJump.enabled = false;
             objTriggado = false;
+            //coVisao = null;
         }
     }
 }
