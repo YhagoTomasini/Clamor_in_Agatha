@@ -30,9 +30,9 @@ public class MenuERestart : MonoBehaviour
     public void CenaJogo()
     {
         // if(clicarMouse)
-        {
-            GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
-        }
+        // {
+        //     GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+        // }
 
         Debug.Log("Carregando cena oJogo");
         SceneManager.LoadScene("oJogo");
