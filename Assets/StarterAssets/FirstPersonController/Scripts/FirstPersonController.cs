@@ -119,16 +119,16 @@ namespace StarterAssets
 
         }
 
+        private void GroundedCheck()
+        {
+            // set sphere position, with offset
+            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
+            Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+        }
+
         private void LateUpdate()
 		{
 			CameraRotation();
-		}
-
-		private void GroundedCheck()
-		{
-			// set sphere position, with offset
-			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
-			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 		}
 
 		private void CameraRotation()
@@ -173,7 +173,7 @@ namespace StarterAssets
                 // Limitar a velocidade vertical para não cair muito rápido
                 if (_verticalVelocity < -_terminalVelocity)
                 {
-                    _verticalVelocity = -_terminalVelocity * 0.2f;
+					_verticalVelocity = -_terminalVelocity * 0.2f;
                 }
             }
         }
