@@ -9,7 +9,6 @@ public class CutCaixa : MonoBehaviour
     private bool objTriggado;
     public bool podeQuebrar;
 
-
     void Start()
     {
 
@@ -39,7 +38,8 @@ public class CutCaixa : MonoBehaviour
             if (podeQuebrar==true)
             {
                 cortaCaixa();
-                GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+                StartCoroutine(GameObject.Find("PlayerCapsule").GetComponent<CharacterActs>().IconFaca());
+                //GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
             }
         }
     }

@@ -21,9 +21,14 @@ public class CharacterActs : MonoBehaviour
     public Image whiteBlur;
 
     public GameObject canvaMorte;
-    public GameObject iconFaca;
+
     public GameObject iconPulo;
-    public GameObject iconShrek;
+    public GameObject iconFaca;
+
+    public GameObject iconFacaOn;
+    public GameObject iconPuloOn;
+
+    //public float delayIcon = .5f;
 
     private bool podeSeguir;
 
@@ -32,14 +37,19 @@ public class CharacterActs : MonoBehaviour
         whiteBlur.gameObject.SetActive(false);
 
         canvaMorte = GameObject.Find("CanvasRestart");
-        iconFaca = GameObject.Find("IconFaca");
-        iconPulo = GameObject.Find("IconPulo");
-        iconShrek = GameObject.Find("IconShrek");
-
         canvaMorte.SetActive(false);
+
+
+        iconFaca = GameObject.Find("IconFaca");
+        iconFacaOn = GameObject.Find("IconFacaOn");
         iconFaca.SetActive(false);
-        iconPulo.SetActive(false); 
-        iconShrek.SetActive(false);
+        iconFacaOn.SetActive(false);
+
+
+        iconPulo = GameObject.Find("IconPulo");
+        iconPuloOn = GameObject.Find("IconPuloOn");
+        iconPulo.SetActive(false);
+        iconPuloOn.SetActive(false);
 
         podeSeguir = false;
 
@@ -76,6 +86,18 @@ public class CharacterActs : MonoBehaviour
         }
 
         whiteBlur.gameObject.SetActive(false);
+    }
+
+    public IEnumerator IconFaca()
+    {
+        Debug.Log("Ativando ícone da faca");
+        iconFacaOn.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Desativando ícone da faca");
+        iconFacaOn.SetActive(false);
+
+        yield return null;
     }
 
     private void OnTriggerEnter(Collider other)

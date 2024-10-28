@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class ondaSom : MonoBehaviour
 {
     public GameObject onda;
+    public GameObject iconSonarOn;
 
     public Vector3 scaleOndaI = new Vector3(2f, 2f, 2f);
     public Vector3 scaleOndaF = new Vector3(20f, 20f, 20f);
@@ -18,6 +19,10 @@ public class ondaSom : MonoBehaviour
     private void Start()
     {
         Vector3 pposition = transform.position;
+
+
+        iconSonarOn = GameObject.Find("IconSonarOn");
+        iconSonarOn.SetActive(false);
 
         GameObject newOnda = Instantiate(onda, pposition, Quaternion.identity);
 
@@ -46,8 +51,12 @@ public class ondaSom : MonoBehaviour
     IEnumerator DelayOnda()
     {
         podeSonar = false;
+        iconSonarOn.SetActive(true);
+
         yield return new WaitForSeconds(delayVelo);
         podeSonar = true;
+        iconSonarOn.SetActive(false);
+
         yield return null;
     }
     IEnumerator CrescerAteMorrer(GameObject objeto)
