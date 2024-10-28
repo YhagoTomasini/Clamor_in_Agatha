@@ -61,4 +61,7 @@ public class SoundManager : MonoBehaviour
         // Inverte o estado de mudo do AudioSource principal
         JumppowerAudio.mute = !JumppowerAudio.mute;
     }
+
+   
 }
+
