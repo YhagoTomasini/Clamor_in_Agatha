@@ -177,7 +177,7 @@ public class CharacterActs : MonoBehaviour
             iconPulo.SetActive(true);
 
             if (pulos != null)
-            { 
+            {
                 foreach (Transform child in pulos.transform)
                 {
                     JumpUp jumpUp = child.GetComponent<JumpUp>();
@@ -185,7 +185,9 @@ public class CharacterActs : MonoBehaviour
                     if (jumpUp != null)
                     {
                         jumpUp.podePular = true;
-                    }
+
+                        //jumpUp.DefinirColliders(other.gameObject);
+                    } 
                 }
             }
         }
@@ -202,6 +204,22 @@ public class CharacterActs : MonoBehaviour
                     //funcao de shrink  
 
         } 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        //if (pulos != null)
+        //{
+        //    foreach (Transform child in pulos.transform)
+        //    {
+        //        JumpUp jumpUp = child.GetComponent<JumpUp>();
+
+        //        if (jumpUp != null)
+        //        {
+        //            jumpUp.DefinirColliders(null);
+        //        }
+        //    }
+        //}
     }
 
 

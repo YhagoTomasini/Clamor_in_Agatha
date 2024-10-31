@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,9 @@ public class JumpUp : MonoBehaviour
 
     public GameObject character;
     public GameObject posiPulo;
+
+    public GameObject coContato;
+    public GameObject coAlvo;
 
     void Start()
     {
@@ -59,19 +63,32 @@ public class JumpUp : MonoBehaviour
 
     }
 
+    //public void DefinirColliders(GameObject objeto1)
+    //{
+    //    coContato = objeto1;
+    //    Debug.Log("novo contato");
+    //}
+
     private void OnTriggerEnter(Collider other)
     {
-        if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
-        {
-            textoJump.enabled = true;
-            objTriggado = true;
-        }
+        if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+        //{
+        //    coAlvo = other.gameObject;
+        ////so pass se objetoContato != alvoContato
+        //    if (coAlvo != coContato)
+            {
+                textoJump.enabled = true;
+                objTriggado = true;
+            }
+        //}
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
         {
+            coAlvo = null;
+
             textoJump.enabled = false;
             objTriggado = false;
         }

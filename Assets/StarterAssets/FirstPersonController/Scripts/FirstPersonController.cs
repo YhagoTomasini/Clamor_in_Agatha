@@ -121,7 +121,6 @@ namespace StarterAssets
 
         private void GroundedCheck()
         {
-            // set sphere position, with offset
             Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
         }
@@ -156,21 +155,17 @@ namespace StarterAssets
 
         private void ApplyGravity()
         {
-            // Verifica se o personagem está no chão
             if (Grounded)
             {
-                // Resetar a velocidade vertical se estiver no chão
                 if (_verticalVelocity < 0.0f)
                 {
-                    _verticalVelocity = -.5f;  // Pequeno valor para manter o personagem "preso" ao chão
+                    _verticalVelocity = -.5f;
                 }
             }
             else
             {
-                // Aplicar gravidade quando não está no chão
                 _verticalVelocity += Physics.gravity.y * Time.deltaTime;
 
-                // Limitar a velocidade vertical para não cair muito rápido
                 if (_verticalVelocity < -_terminalVelocity)
                 {
 					_verticalVelocity = -_terminalVelocity * 0.2f;
@@ -181,7 +176,7 @@ namespace StarterAssets
         private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			float targetSpeed = /*_input.sprint ? SprintSpeed :*/ MoveSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
