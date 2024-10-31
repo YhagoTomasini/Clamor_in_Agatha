@@ -11,7 +11,7 @@ public class ondaSom : MonoBehaviour
     public Vector3 scaleOndaI = new Vector3(2f, 2f, 2f);
     public Vector3 scaleOndaF = new Vector3(20f, 20f, 20f);
 
-    public float delayVelo;
+    public float delayVelo = 1f;
     public float scaleVelo = 2f;
 
     public bool podeSonar = true;
@@ -30,7 +30,7 @@ public class ondaSom : MonoBehaviour
 
         StartCoroutine(CrescerAteMorrer(newOnda));
 
-        delayVelo = 1f;
+        //delayVelo = 1f;
     }
     void Update()
     {

@@ -14,36 +14,40 @@ public class NavMeshTest : MonoBehaviour
     public bool andando = false;
     private Coroutine passosCoroutine;
 
-    //private void Start()
-    //{
-    //    StartCoroutine(AndaleAndale());
-    //}
+    private void Start()
+    {
 
-    //IEnumerator AndaleAndale()
-    //{
-    //    while (true)
-    //    {
-    //        DestinoInimigo();
+        //    StartCoroutine(AndaleAndale());
+        //}
 
-    //        yield return new WaitForSeconds(4f);
-    //    }
-    //}
+        //IEnumerator AndaleAndale()
+        //{
+        //    while (true)
+        //    {
+        //        DestinoInimigo();
+
+        //        yield return new WaitForSeconds(4f);
+        //    }
+    }
 
     private void Update()
     {
         destinoAtual = destino.position;
 
-        if (!meuAgente.pathPending &&
-            meuAgente.remainingDistance <= meuAgente.stoppingDistance &&
-            meuAgente.velocity.sqrMagnitude < 0.01f)
+        if (andando)
         {
-            if (andando)
+            if (!meuAgente.pathPending &&
+                meuAgente.remainingDistance <= meuAgente.stoppingDistance &&
+                meuAgente.velocity.sqrMagnitude < 0.01f)
             {
-                andando = false;
-                if (passosCoroutine != null)
+                if (andando)
                 {
-                    StopCoroutine(passosCoroutine);
-                    passosCoroutine = null;
+                    andando = false;
+                    if (passosCoroutine != null)
+                    {
+                        StopCoroutine(passosCoroutine);
+                        passosCoroutine = null;
+                    }
                 }
             }
         }
@@ -51,6 +55,8 @@ public class NavMeshTest : MonoBehaviour
 
     public void DestinoInimigo()
     {
+        meuAgente = GameObject.Find("Inimigo(Clone)").GetComponent<NavMeshAgent>();
+
         meuAgente.SetDestination(destinoAtual);
         andando = true;
 
@@ -64,7 +70,7 @@ public class NavMeshTest : MonoBehaviour
     {
         while (andando)
         {
-            GameObject.Find("Inimigo").GetComponent<ondaCoisa>().Andando();
+            GameObject.Find("Inimigo(Clone)").GetComponent<ondaCoisa>().Andando();
             yield return new WaitForSeconds(4f);
         }
     }

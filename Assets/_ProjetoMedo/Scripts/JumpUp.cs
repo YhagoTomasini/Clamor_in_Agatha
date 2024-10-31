@@ -47,6 +47,7 @@ public class JumpUp : MonoBehaviour
             if (podePular==true)
             {
                 StartCoroutine(teleportAction());
+                GameObject.Find("PlayerCapsule").GetComponent<CharacterActs>().FuncPulo();
             }
         }
     }
@@ -54,7 +55,7 @@ public class JumpUp : MonoBehaviour
 
     IEnumerator teleportAction()
     {
-        playerCapsuleToTeleport.SetActive(false);
+        //playerCapsuleToTeleport.SetActive(false);
         //coAtual = null;
         //coVisao = null;
 
@@ -64,7 +65,7 @@ public class JumpUp : MonoBehaviour
         character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
         yield return new  WaitForSeconds(0.5f);
 
-        playerCapsuleToTeleport.SetActive(true);
+        //playerCapsuleToTeleport.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

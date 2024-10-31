@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 2
-  SprintSpeed: 6
+  SprintSpeed: 0
   RotationSpeed: 6
   SpeedChangeRate: 10
   JumpTimeout: 0.1
@@ -475,9 +475,10 @@ MonoBehaviour:
   valorBarraAtual: 0
   whiteBlur: {fileID: 0}
   canvaMorte: {fileID: 0}
-  iconFaca: {fileID: 0}
   iconPulo: {fileID: 0}
-  iconShrek: {fileID: 0}
+  iconFaca: {fileID: 0}
+  iconFacaOn: {fileID: 0}
+  iconPuloOn: {fileID: 0}
 --- !u!54 &8976485276486609298
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -701,7 +702,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2216576003985328831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 580897ab7431946d28f507b163231fe5, type: 3}
   m_Name: 
@@ -915,9 +916,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3047124783443091047}
-  - {fileID: 1646528826630391008}
   - {fileID: 4535682428775024169}
   - {fileID: 3689588115591752944}
+  - {fileID: 4929783746757742681}
   m_Father: {fileID: 8559206812856354855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4734122255732858547
@@ -1071,9 +1072,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onda: {fileID: 7031158962890822065, guid: 38b0f92ce8841694ea7b206f9ee0845e, type: 3}
+  iconSonarOn: {fileID: 0}
   scaleOndaI: {x: 4, y: 4, z: 4}
   scaleOndaF: {x: 30, y: 30, z: 30}
+  delayVelo: 0.75
   scaleVelo: 2.5
+  podeSonar: 1
 --- !u!1 &4887456993488935074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,7 +2357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901182334643ba1438a25accc6bd0c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &5296833909609901882
+--- !u!1001 &1959518201776257923
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2364,17 +2368,17 @@ PrefabInstance:
     - target: {fileID: 6871234498562124762, guid: 38b0f92ce8841694ea7b206f9ee0845e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.4
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6871234498562124762, guid: 38b0f92ce8841694ea7b206f9ee0845e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20.4
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6871234498562124762, guid: 38b0f92ce8841694ea7b206f9ee0845e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 20.4
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6871234498562124762, guid: 38b0f92ce8841694ea7b206f9ee0845e,
         type: 3}
@@ -2441,9 +2445,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38b0f92ce8841694ea7b206f9ee0845e, type: 3}
---- !u!4 &1646528826630391008 stripped
+--- !u!4 &4929783746757742681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6871234498562124762, guid: 38b0f92ce8841694ea7b206f9ee0845e,
     type: 3}
-  m_PrefabInstance: {fileID: 5296833909609901882}
+  m_PrefabInstance: {fileID: 1959518201776257923}
   m_PrefabAsset: {fileID: 0}

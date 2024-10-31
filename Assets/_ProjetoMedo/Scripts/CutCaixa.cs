@@ -38,8 +38,8 @@ public class CutCaixa : MonoBehaviour
             if (podeQuebrar==true)
             {
                 cortaCaixa();
-                StartCoroutine(GameObject.Find("PlayerCapsule").GetComponent<CharacterActs>().IconFaca());
-                //GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+                GameObject.Find("PlayerCapsule").GetComponent<CharacterActs>().FuncFaca();
+                GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
             }
         }
     }
@@ -47,6 +47,7 @@ public class CutCaixa : MonoBehaviour
     public void cortaCaixa()
     {
         textoCut.enabled = false;
+        GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
 
         Destroy(gameObject);
         

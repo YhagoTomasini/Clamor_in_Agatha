@@ -4,6 +4,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 //using UnityEngine.UIElements;
 using UnityEngine.UI;
+//using UnityEngine.Windows;
 
 public class CharacterActs : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class CharacterActs : MonoBehaviour
 
     public Image whiteBlur;
 
+    public GameObject aCoisa;
     public GameObject canvaMorte;
+
+    public float delayVelo = 1f;
 
     public GameObject iconPulo;
     public GameObject iconFaca;
@@ -51,7 +55,7 @@ public class CharacterActs : MonoBehaviour
         iconPulo.SetActive(false);
         iconPuloOn.SetActive(false);
 
-        podeSeguir = false;
+        podeSeguir = true;
 
         //caixas = GameObject.FindGameObjectsWithTag("Caixas");
         
@@ -88,14 +92,41 @@ public class CharacterActs : MonoBehaviour
         whiteBlur.gameObject.SetActive(false);
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.K))
+    //    {
+    //        Debug.Log("KKKK");
+    //        StartCoroutine(IconFaca());
+    //    }
+    //}
+
+    public void FuncFaca()
+    {
+        StartCoroutine(IconFaca());
+    }
     public IEnumerator IconFaca()
     {
         Debug.Log("Ativando ícone da faca");
         iconFacaOn.SetActive(true);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(delayVelo);
         Debug.Log("Desativando ícone da faca");
         iconFacaOn.SetActive(false);
+
+        yield return null;
+    }
+
+    public void FuncPulo()
+    {
+        StartCoroutine(IconPulo());
+    }
+    public IEnumerator IconPulo()
+    {
+        iconPuloOn.SetActive(true);
+
+        yield return new WaitForSeconds(delayVelo);
+        iconPuloOn.SetActive(false);
 
         yield return null;
     }
@@ -125,12 +156,9 @@ public class CharacterActs : MonoBehaviour
 
         if (valorBarraAtual >= 2 && caixas!=null)
         {
-            if (valorBarraAtual == 2)
+            if (valorBarraAtual == 2 && podeSeguir)
             {
-                podeSeguir = true;
-            }
-            if (podeSeguir)
-            {
+                Instantiate(aCoisa, new Vector3(-16f, 3.75f, -16f), Quaternion.identity);
                 GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
                 podeSeguir = false;
             }
