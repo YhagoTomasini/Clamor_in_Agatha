@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class CharacterActs : MonoBehaviour
 {
-    //public GameObject[] caixas;
-
     public GameObject caixas;
     public GameObject pulos;
 
@@ -32,8 +30,6 @@ public class CharacterActs : MonoBehaviour
     public GameObject iconFacaOn;
     public GameObject iconPuloOn;
 
-    //public float delayIcon = .5f;
-
     private bool podeSeguir;
 
     void Start()
@@ -49,16 +45,13 @@ public class CharacterActs : MonoBehaviour
         iconFaca.SetActive(false);
         iconFacaOn.SetActive(false);
 
-
         iconPulo = GameObject.Find("IconPulo");
         iconPuloOn = GameObject.Find("IconPuloOn");
         iconPulo.SetActive(false);
         iconPuloOn.SetActive(false);
 
         podeSeguir = true;
-
-        //caixas = GameObject.FindGameObjectsWithTag("Caixas");
-        
+                
         valorBarraAtual = 0;
         rectBarra = barraCanva.GetComponent<RectTransform>();
 

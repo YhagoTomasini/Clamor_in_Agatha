@@ -38,7 +38,7 @@ public class CutCaixa : MonoBehaviour
             if (podeQuebrar==true)
             {
                 cortaCaixa();
-                GameObject.Find("PlayerCapsule").GetComponent<CharacterActs>().FuncFaca();
+                GameObject.Find("Agatha").GetComponent<CharacterActs>().FuncFaca();
                 GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
             }
         }

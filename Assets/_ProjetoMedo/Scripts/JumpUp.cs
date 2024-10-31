@@ -13,14 +13,10 @@ public class JumpUp : MonoBehaviour
     public GameObject character;
     public GameObject posiPulo;
 
-    public GameObject playerCapsuleToTeleport;
-
-    //public Collider coAtual;
-    //public Collider coVisao;
-
     void Start()
     {
-        playerCapsuleToTeleport = GameObject.Find("PlayerCapsule");
+        character = GameObject.Find("Agatha");
+
         podePular = false;
         
         if (textoJump == null)
@@ -47,7 +43,7 @@ public class JumpUp : MonoBehaviour
             if (podePular==true)
             {
                 StartCoroutine(teleportAction());
-                GameObject.Find("PlayerCapsule").GetComponent<CharacterActs>().FuncPulo();
+                character.GetComponent<CharacterActs>().FuncPulo();
             }
         }
     }
@@ -55,30 +51,20 @@ public class JumpUp : MonoBehaviour
 
     IEnumerator teleportAction()
     {
-        //playerCapsuleToTeleport.SetActive(false);
-        //coAtual = null;
-        //coVisao = null;
 
         yield return new  WaitForSeconds(0.5f);
 
-        //coAtual = coVisao;
         character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
         yield return new  WaitForSeconds(0.5f);
 
-        //playerCapsuleToTeleport.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
         {
-
             textoJump.enabled = true;
             objTriggado = true;
-            //if (coAtual != other)
-            {
-                //coVisao = other;
-            }
         }
     }
 
@@ -88,7 +74,6 @@ public class JumpUp : MonoBehaviour
         {
             textoJump.enabled = false;
             objTriggado = false;
-            //coVisao = null;
         }
     }
 }
