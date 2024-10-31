@@ -2683,6 +2683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1273102772}
+  - {fileID: 676205936}
   - {fileID: 1809738194}
   - {fileID: 1909644149}
   - {fileID: 170628093}
@@ -4301,6 +4302,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &676205936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1126487826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &684326554
 Mesh:
   m_ObjectHideFlags: 0
@@ -8613,6 +8620,74 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1677369104}
   m_SourcePrefab: {fileID: 100100000, guid: 6e0fbcacfd7ab4f0894a9ab60afcc475, type: 3}
+--- !u!1001 &1126487826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 456593320}
+    m_Modifications:
+    - target: {fileID: 1608140987291393874, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_Name
+      value: Buffs (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.541
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.258
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9bb3b45015294bd0a8ebf16ae66fabb, type: 3}
 --- !u!1 &1137728774
 GameObject:
   m_ObjectHideFlags: 0
@@ -17611,6 +17686,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agatha
       objectReference: {fileID: 0}
+    - target: {fileID: 4929783746757742681, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929783746757742681, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929783746757742681, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.96
+      objectReference: {fileID: 0}
     - target: {fileID: 8559206812856354855, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17659,6 +17749,11 @@ PrefabInstance:
     - target: {fileID: 8559206812856354855, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836672418104764978, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

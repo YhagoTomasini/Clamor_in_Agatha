@@ -120,6 +120,7 @@
     <Compile Include="Assets/_ProjetoMedo/Scripts/SeguirCapsula.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
+    <Compile Include="Assets/_ProjetoMedo/_LaEfeito/triggerInim.cs" />
     <Compile Include="Assets/_ProjetoMedo/Scripts/Quitgame.cs" />
     <Compile Include="Assets/StarterAssets/FirstPersonController/Scripts/FirstPersonController.cs" />
     <Compile Include="Assets/_ProjetoMedo/Scripts/GameManager.cs" />

@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UiGame.unity
+    path: Assets/_ProjetoMedo/Scenes/UiGame.unity
     guid: 7811c0c1188a240929b954a87b10fd44
   - enabled: 1
-    path: Assets/Scenes/oJogo.unity
+    path: Assets/_ProjetoMedo/Scenes/oJogo.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

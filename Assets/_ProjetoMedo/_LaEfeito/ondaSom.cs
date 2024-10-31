@@ -48,6 +48,15 @@ public class ondaSom : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Dano"))
+        {
+            Debug.Log("colidiu c o dano");
+            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+        }
+    }
+
     IEnumerator DelayOnda()
     {
         podeSonar = false;
