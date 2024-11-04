@@ -30,9 +30,9 @@ Material:
   - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3001
   stringTagMap:
     RenderType: Transparent
@@ -127,7 +127,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Intercecao: 0.78
-    - _IntercecaoEfeito: 1
+    - _IntercecaoEfeito: 2
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
