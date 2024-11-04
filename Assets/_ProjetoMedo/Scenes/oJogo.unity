@@ -3423,6 +3423,12 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &526577690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2216576003985328831, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+    type: 3}
+  m_PrefabInstance: {fileID: 4725520735735357851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &549505897
 Mesh:
   m_ObjectHideFlags: 0
@@ -18543,6 +18549,16 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1970617336}
+    - target: {fileID: 6632418138306702931, guid: dcf1c83d8133d468081dadb44d32caf5,
+        type: 3}
+      propertyPath: canvaPause
+      value: 
+      objectReference: {fileID: 1970617336}
+    - target: {fileID: 6632418138306702931, guid: dcf1c83d8133d468081dadb44d32caf5,
+        type: 3}
+      propertyPath: meujogador
+      value: 
+      objectReference: {fileID: 526577690}
     - target: {fileID: 6739099073296328652, guid: dcf1c83d8133d468081dadb44d32caf5,
         type: 3}
       propertyPath: m_LocalPosition.x
