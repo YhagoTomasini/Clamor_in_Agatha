@@ -9,6 +9,7 @@ TagManager:
   - Caixas
   - Dano
   - AlcancePulo
+  - TriggerObjPulo
   layers:
   - Default
   - TransparentFX

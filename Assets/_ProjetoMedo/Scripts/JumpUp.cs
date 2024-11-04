@@ -59,17 +59,8 @@ public class JumpUp : MonoBehaviour
     IEnumerator teleportAction()
     {
         yield return new  WaitForSeconds(0.5f);
-        foreach (Transform child in pulos.transform)
-        {
-            JumpUp jumpUp = child.GetComponent<JumpUp>();
-
-            if (jumpUp != null)
-            {
-                jumpUp.podePular = true;
-            }
-            character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
-            yield return new WaitForSeconds(0.5f);
-        }
+        character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
+        yield return new WaitForSeconds(0.5f);
     } 
 
     private void OnTriggerEnter(Collider other)
