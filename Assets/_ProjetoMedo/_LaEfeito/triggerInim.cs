@@ -10,7 +10,14 @@ public class triggerInim : MonoBehaviour
         if (other.CompareTag("Dano"))
         {
             Debug.Log("colidiu c o dano");
-            GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+            StartCoroutine(DelayInim());
         }
     }
+    IEnumerator DelayInim()
+    {
+        yield return new WaitForSeconds(1f);
+        GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
+        yield return null;
+    }
+
 }

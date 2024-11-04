@@ -71,6 +71,14 @@ public class JumpUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.CompareTag("AlcancePulo") == true)
+        {
+            objTriggado = true;
+
+
+        }
+
         if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
         //{
         //    coAlvo = other.gameObject;
@@ -78,19 +86,27 @@ public class JumpUp : MonoBehaviour
         //    if (coAlvo != coContato)
             {
                 textoJump.enabled = true;
-                objTriggado = true;
+              //  objTriggado = true;
             }
         //}
     }
 
     private void OnTriggerExit(Collider other)
     {
+
+        if (other.gameObject.CompareTag("AlcancePulo") == true)
+        {
+            objTriggado = false;
+
+
+        }
+
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
         {
             coAlvo = null;
 
             textoJump.enabled = false;
-            objTriggado = false;
+           // objTriggado = false;
         }
     }
 }
