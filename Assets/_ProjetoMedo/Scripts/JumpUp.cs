@@ -78,7 +78,6 @@ public class JumpUp : MonoBehaviour
             }
 
             if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
-            
             {
                 textoJump.enabled = true;
             }
@@ -93,14 +92,17 @@ public class JumpUp : MonoBehaviour
             objPulo = true;
         }
 
-        if (other.gameObject.CompareTag("AlcancePulo") == true)
+        if (!objPulo)
         {
-            objTriggado = false;
-        }
+            if (other.gameObject.CompareTag("AlcancePulo") == true)
+            {
+                objTriggado = false;
+            }
 
-        if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
-        {
-            textoJump.enabled = false;
+            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+            {
+                textoJump.enabled = false;
+            }
         }
     }
 }
