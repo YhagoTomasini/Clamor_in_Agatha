@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5568098356807358443}
   - component: {fileID: 2521785264211939584}
   - component: {fileID: 6508607090029325316}
+  - component: {fileID: 2703438389794457174}
   m_Layer: 0
   m_Name: PlatBox
   m_TagString: Untagged
@@ -3075,4 +3076,26 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715836979720999437}
+  m_Mesh: {fileID: 0}
+--- !u!64 &2703438389794457174
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715836979720999437}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 0}

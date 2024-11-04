@@ -46,12 +46,15 @@ public class JumpUp : MonoBehaviour
 
     void Update()
     {
-        if (objTriggado && Input.GetKeyDown(KeyCode.Space) || objTriggado && Input.GetKeyDown(KeyCode.Mouse1))
+        if (objPulo)
         {
-            if (podePular==true)
+            if (objTriggado && Input.GetKeyDown(KeyCode.Space) || objTriggado && Input.GetKeyDown(KeyCode.Mouse1))
             {
-                StartCoroutine(teleportAction());
-                character.GetComponent<CharacterActs>().FuncPulo();
+                if (podePular == true)
+                {
+                    StartCoroutine(teleportAction());
+                    character.GetComponent<CharacterActs>().FuncPulo();
+                }
             }
         }
     }
@@ -92,8 +95,6 @@ public class JumpUp : MonoBehaviour
             objPulo = true;
         }
 
-        if (objPulo)
-        {
             if (other.gameObject.CompareTag("AlcancePulo") == true)
             {
                 objTriggado = false;
@@ -103,6 +104,6 @@ public class JumpUp : MonoBehaviour
             {
                 textoJump.enabled = false;
             }
-        }
+        
     }
 }
