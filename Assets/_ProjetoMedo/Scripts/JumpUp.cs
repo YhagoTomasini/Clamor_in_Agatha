@@ -14,12 +14,16 @@ public class JumpUp : MonoBehaviour
     public GameObject character;
     public GameObject posiPulo;
 
-    public GameObject coContato;
-    public GameObject coAlvo;
+    public GameObject pulos;
+    public GameObject triggerObjPulo;
+    public bool objPulo = true;
 
     void Start()
     {
         character = GameObject.Find("Agatha");
+        triggerObjPulo = GameObject.Find("triggerObjPulo");
+
+        pulos = GameObject.Find("pulos");
 
         podePular = false;
         
@@ -52,61 +56,60 @@ public class JumpUp : MonoBehaviour
         }
     }
 
-
     IEnumerator teleportAction()
     {
-
         yield return new  WaitForSeconds(0.5f);
+        foreach (Transform child in pulos.transform)
+        {
+            JumpUp jumpUp = child.GetComponent<JumpUp>();
 
-        character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
-        yield return new  WaitForSeconds(0.5f);
-
-    }
-
-    //public void DefinirColliders(GameObject objeto1)
-    //{
-    //    coContato = objeto1;
-    //    Debug.Log("novo contato");
-    //}
+            if (jumpUp != null)
+            {
+                jumpUp.podePular = true;
+            }
+            character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
+            yield return new WaitForSeconds(0.5f);
+        }
+    } 
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.CompareTag("AlcancePulo") == true)
+        if (other.gameObject.CompareTag("TriggerObjPulo"))
         {
-            objTriggado = true;
-
-
+            objPulo = false;
         }
 
-        if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
-        //{
-        //    coAlvo = other.gameObject;
-        ////so pass se objetoContato != alvoContato
-        //    if (coAlvo != coContato)
+        if (objPulo)
+        {
+            if (other.gameObject.CompareTag("AlcancePulo") == true)
+            {
+                objTriggado = true;
+            }
+
+            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+            
             {
                 textoJump.enabled = true;
-              //  objTriggado = true;
             }
-        //}
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
 
+        if (other.gameObject.CompareTag("TriggerObjPulo"))
+        {
+            objPulo = true;
+        }
+
         if (other.gameObject.CompareTag("AlcancePulo") == true)
         {
             objTriggado = false;
-
-
         }
 
         if (podePular==true && other.gameObject.CompareTag("AlcancePulo"))
         {
-            coAlvo = null;
-
             textoJump.enabled = false;
-           // objTriggado = false;
         }
     }
 }
