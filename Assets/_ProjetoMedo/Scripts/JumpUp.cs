@@ -92,7 +92,7 @@ public class JumpUp : MonoBehaviour
             objPulo = true;
         }
 
-        if (!objPulo)
+        if (objPulo)
         {
             if (other.gameObject.CompareTag("AlcancePulo") == true)
             {
