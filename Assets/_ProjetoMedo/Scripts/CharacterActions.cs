@@ -36,8 +36,8 @@ public class CharacterActs : MonoBehaviour
     {
         whiteBlur.gameObject.SetActive(false);
 
-        canvaMorte = GameObject.Find("CanvasRestart");
-        canvaMorte.SetActive(false);
+        //canvaMorte = GameObject.Find("CanvasRestart");
+        //canvaMorte.SetActive(false);
 
 
         iconFaca = GameObject.Find("IconFaca");
