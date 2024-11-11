@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3538884718863622250}
   - component: {fileID: 8476206627701089130}
   m_Layer: 5
-  m_Name: Buffs
+  m_Name: Vitoria
   m_TagString: Buffs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19151d262ccaf4929b32bbe5ab967c74, type: 2}
+  - {fileID: 2100000, guid: d782e974f447245cea9a3755a44dbc9f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,7 +153,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8211471347712669021}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -411,8 +411,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: 0.1
+      scalar: 1
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -735,7 +735,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.1
+      scalar: -0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -875,7 +875,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.2
+      value: 0.6
       mode: 0
       spread: 0
       speed:
@@ -1112,20 +1112,20 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: -1.0611869
-          outSlope: -1.0611869
+          inSlope: -1.5786254
+          outSlope: -1.5786254
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.14007781
+          outWeight: 0.0856031
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -0.8419323
-          outSlope: -0.8419323
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.12840474
+          inWeight: 0.11024648
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -4901,7 +4901,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c3f8327ce009c473da98695a9db6ecaa, type: 2}
+  - {fileID: 2100000, guid: c4e04ab1723544135a0810faf45bc44f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5016,7 +5016,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19151d262ccaf4929b32bbe5ab967c74, type: 2}
+  - {fileID: 2100000, guid: d782e974f447245cea9a3755a44dbc9f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
