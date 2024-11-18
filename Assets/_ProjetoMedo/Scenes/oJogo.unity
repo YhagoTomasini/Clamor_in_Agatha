@@ -23783,6 +23783,7 @@ MonoBehaviour:
   musicas:
   - {fileID: 8300000, guid: 5ec95992b86c165468d5cf1525e7db39, type: 3}
   - {fileID: 8300000, guid: e921590635403b9459036d4f692168c9, type: 3}
+  - {fileID: 8300000, guid: 55d274ddc252a4a7386cc599c005e948, type: 3}
 --- !u!1001 &3403197595454534829
 PrefabInstance:
   m_ObjectHideFlags: 0
