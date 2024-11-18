@@ -2,7 +2,18 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Referência para o AudioSource principal do jogo
+    public void MutarMusic()
+    {
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().MuteMusic();
+    }
+
+    public void MutarSons()
+    {
+        GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().MuteEffects();
+    }
+
+
+    /*// Referência para o AudioSource principal do jogo
     public AudioSource MenuAudio;
     public AudioSource GameAudio;
     public AudioSource CatstepAudio;
@@ -60,8 +71,8 @@ public class SoundManager : MonoBehaviour
     {
         // Inverte o estado de mudo do AudioSource principal
         JumppowerAudio.mute = !JumppowerAudio.mute;
-    }
+    }*/
 
-   
+
 }
 

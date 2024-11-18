@@ -22,6 +22,8 @@ public class MenuERestart : MonoBehaviour
     }
     public void CenaUi()
     {
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaMenu();
+
         GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
         
 

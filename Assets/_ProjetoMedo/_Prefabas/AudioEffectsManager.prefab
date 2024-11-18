@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -1667691884134651075}
   - component: {fileID: 3220338154794266369}
   m_Layer: 0
-  m_Name: AudioEffectManager
+  m_Name: AudioEffectsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,3 +148,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6223d5831dd6ab04d88070f742507564, type: 3}
   - {fileID: 8300000, guid: db2e5fbc4f1800146ab683132b592fcb, type: 3}
   - {fileID: 8300000, guid: b2a1112a829042d49b268022ffe4d94d, type: 3}
+  - {fileID: 8300000, guid: d085d502524414302a6ac3ac2c95a7f0, type: 3}
