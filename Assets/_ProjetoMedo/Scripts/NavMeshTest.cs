@@ -43,6 +43,7 @@ public class NavMeshTest : MonoBehaviour
                 if (andando)
                 {
                     andando = false;
+                    TrocarMusica();
                     if (passosCoroutine != null)
                     {
                         StopCoroutine(passosCoroutine);
@@ -52,9 +53,14 @@ public class NavMeshTest : MonoBehaviour
             }
         }
     }
-
+    void TrocarMusica()
+    {
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
+    }
     public void DestinoInimigo()
     {
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaPersseguicao();
+
         meuAgente = GameObject.Find("Inimigo(Clone)").GetComponent<NavMeshAgent>();
 
         meuAgente.SetDestination(destinoAtual);
