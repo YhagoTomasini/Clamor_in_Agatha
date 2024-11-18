@@ -13,7 +13,7 @@ public class TransicaoInicial : MonoBehaviour
 
     IEnumerator IniciarJogo()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene("UiGame");
     }
 }
