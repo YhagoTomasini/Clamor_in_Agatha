@@ -30,6 +30,10 @@ public class AudioSourceMusic : MonoBehaviour
     {
         TocarMusica(1);
     }
+    public void TemaMenu()
+    {
+        TocarMusica(2);
+    }
 
     private void TocarMusica(int indice)
     {
@@ -41,4 +45,5 @@ public class AudioSourceMusic : MonoBehaviour
         emissor.clip = musicas[indice];
         emissor.Play();
     }
+
 }

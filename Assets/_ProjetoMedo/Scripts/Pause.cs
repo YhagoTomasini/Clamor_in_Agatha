@@ -17,6 +17,8 @@ public class Pause : MonoBehaviour
     {
         if (isPaused)
         {
+            GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
+
             Time.timeScale = 1f;
             isPaused = false;
             meujogador.GetComponent<StarterAssets.FirstPersonController>().enabled = true;
@@ -31,6 +33,8 @@ public class Pause : MonoBehaviour
         }
         else
         {
+            GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaMenu();
+
             Time.timeScale = 0f;
             isPaused = true;
             meujogador.GetComponent<StarterAssets.FirstPersonController>().enabled = false;
@@ -46,7 +50,6 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        // Verifica se a tecla "P" foi pressionada
         if (Input.GetKeyDown(KeyCode.P))
         {
             TogglePause();

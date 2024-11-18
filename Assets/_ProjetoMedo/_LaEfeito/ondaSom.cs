@@ -41,6 +41,8 @@ public class ondaSom : MonoBehaviour
             {
                 GameObject newOnda = Instantiate(onda, pposition, Quaternion.identity);
 
+                GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().SomSonar();
+
                 newOnda.transform.localScale = scaleOndaI;
                 StartCoroutine(DelayOnda());
                 StartCoroutine(CrescerAteMorrer(newOnda));

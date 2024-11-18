@@ -78,7 +78,7 @@ public class NavMeshTest : MonoBehaviour
         {
             GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().SomInimSteps();
             GameObject.Find("Inimigo(Clone)").GetComponent<ondaCoisa>().Andando();
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(2f);
         }
     }
 }

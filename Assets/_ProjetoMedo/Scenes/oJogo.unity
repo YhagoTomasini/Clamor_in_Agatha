@@ -3838,7 +3838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -23664,9 +23664,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 86cc4e6e631494080ab60785f7fa3e40, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc975acbf423cc740a7cc0e1319ec49b, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6223d5831dd6ab04d88070f742507564, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: db2e5fbc4f1800146ab683132b592fcb, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2a1112a829042d49b268022ffe4d94d, type: 3}
     - target: {fileID: 6325456177769855885, guid: f2ae7dee52fa4074db12cf2581ac2246,
         type: 3}
       propertyPath: m_Name
@@ -24544,7 +24579,7 @@ PrefabInstance:
     - target: {fileID: 1596478734605654685, guid: 63a4752523d0e724c8644cb881ee9352,
         type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2003667266244775636, guid: 63a4752523d0e724c8644cb881ee9352,
         type: 3}

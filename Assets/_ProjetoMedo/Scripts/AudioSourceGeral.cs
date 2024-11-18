@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AudioSourceGeral : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class AudioSourceGeral : MonoBehaviour
     public void SomInimSteps()
     {
         AudioClip audioDaVez = sons[2];
+        emissor.PlayOneShot(audioDaVez);
+    }
+    public void SomSonar()
+    {
+        AudioClip audioDaVez = sons[Random.Range(3, 5)];
         emissor.PlayOneShot(audioDaVez);
     }
 }
