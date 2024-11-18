@@ -193,17 +193,10 @@ public class CharacterActs : MonoBehaviour
         }
 
 
-        if (valorBarraAtual >= 9)
+        if (other.CompareTag("FCD"))
         {
-            //Aumentar barra de progressao.
-            //Ativar buff de shrek.
-
-            //Se colidir com objeto invisivel de shirink;
-                //ativar objeto de aviso de ativacao
-                //Se apertar botao
-                    //funcao de shrink  
-
-        } 
+            AcabarJogo();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -227,8 +220,7 @@ public class CharacterActs : MonoBehaviour
     {
         Debug.Log("final");
 
-        //GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+        GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
         canvaMorte.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
     }
 }
