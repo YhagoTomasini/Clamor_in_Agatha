@@ -47,6 +47,7 @@ public class CutCaixa : MonoBehaviour
     public void cortaCaixa()
     {
         textoCut.enabled = false;
+        GameObject.Find("AudioManager").GetComponent<AudioSourceGeral>().SomCut();
         GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
 
         Destroy(gameObject);

@@ -17,6 +17,9 @@ public class MenuERestart : MonoBehaviour
     //     }
     // }
 
+    private void Start()
+    {
+    }
     public void CenaUi()
     {
         GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
@@ -27,12 +30,17 @@ public class MenuERestart : MonoBehaviour
     }
     public void CenaJogo()
     {
-        GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
-        
+        GameObject pauseManager = GameObject.Find("PauseManager");
+
+        if (pauseManager != null)
+        {
+             pauseManager.GetComponent<Pause>().TogglePause();
+        }
 
         Debug.Log("Carregando cena oJogo");
         SceneManager.LoadScene("oJogo");
     }
+
 
    
 }

@@ -10,6 +10,7 @@ TagManager:
   - Dano
   - AlcancePulo
   - TriggerObjPulo
+  - FCD
   layers:
   - Default
   - TransparentFX
