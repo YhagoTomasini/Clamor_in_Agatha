@@ -23657,51 +23657,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: Priority
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: sons.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: sons.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 86cc4e6e631494080ab60785f7fa3e40, type: 3}
-    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: sons.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: fc975acbf423cc740a7cc0e1319ec49b, type: 3}
-    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: sons.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 6223d5831dd6ab04d88070f742507564, type: 3}
-    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: sons.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: db2e5fbc4f1800146ab683132b592fcb, type: 3}
-    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
-        type: 3}
-      propertyPath: sons.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: b2a1112a829042d49b268022ffe4d94d, type: 3}
     - target: {fileID: 6325456177769855885, guid: f2ae7dee52fa4074db12cf2581ac2246,
         type: 3}
       propertyPath: m_Name
@@ -23762,28 +23717,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2ae7dee52fa4074db12cf2581ac2246, type: 3}
---- !u!1 &2579382545723734384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3827195512800273598, guid: 63a4752523d0e724c8644cb881ee9352,
-    type: 3}
-  m_PrefabInstance: {fileID: 5075537737692514591}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2579382545723734385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579382545723734384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6e18e0483aa4b428bc8c22f3037d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicas:
-  - {fileID: 8300000, guid: 5ec95992b86c165468d5cf1525e7db39, type: 3}
-  - {fileID: 8300000, guid: e921590635403b9459036d4f692168c9, type: 3}
-  - {fileID: 8300000, guid: 55d274ddc252a4a7386cc599c005e948, type: 3}
 --- !u!1001 &3403197595454534829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24572,16 +24505,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1596478734605654685, guid: 63a4752523d0e724c8644cb881ee9352,
-        type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596478734605654685, guid: 63a4752523d0e724c8644cb881ee9352,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 2003667266244775636, guid: 63a4752523d0e724c8644cb881ee9352,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24637,14 +24560,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioMusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3827195512800273598, guid: 63a4752523d0e724c8644cb881ee9352,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3827195512800273598, guid: 63a4752523d0e724c8644cb881ee9352,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2579382545723734385}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a4752523d0e724c8644cb881ee9352, type: 3}
 --- !u!1001 &5463526271274376047
 PrefabInstance:

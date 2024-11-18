@@ -30,6 +30,8 @@ public class MenuERestart : MonoBehaviour
     }
     public void CenaJogo()
     {
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
+
         GameObject pauseManager = GameObject.Find("PauseManager");
 
         if (pauseManager != null)

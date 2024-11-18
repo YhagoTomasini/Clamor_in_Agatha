@@ -8,31 +8,51 @@ public class AudioSourceMusic : MonoBehaviour
 
     private AudioSource emissor;
 
-    // Start is called before the first frame update
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         emissor = GetComponent<AudioSource>();
-        TemaJogo();
+
+        emissor.mute = PlayerPrefs.GetInt("MuteMusic", 0) == 1;
+
+        TemaMenu();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MuteMusic()
     {
+        emissor.mute = !emissor.mute;
 
+        PlayerPrefs.SetInt("MuteMusic", emissor.mute ? 1 : 0);
+        PlayerPrefs.Save();
+
+        TemaMenu();
     }
-
     public void TemaJogo()
     {
-        TocarMusica(0);
+        if (!emissor.mute)
+        {
+            TocarMusica(0);
+        }
     }
 
     public void TemaPersseguicao()
     {
-        TocarMusica(1);
+        if (!emissor.mute)
+        {
+            TocarMusica(1);
+        }
     }
+
     public void TemaMenu()
     {
-        TocarMusica(2);
+        if (!emissor.mute)
+        {
+            TocarMusica(2);
+        }
     }
 
     private void TocarMusica(int indice)
