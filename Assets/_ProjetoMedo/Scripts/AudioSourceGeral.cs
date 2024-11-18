@@ -25,4 +25,14 @@ public class AudioSourceGeral : MonoBehaviour
         AudioClip audioDaVez = sons[0];
         emissor.PlayOneShot(audioDaVez);
     }
+    public void SomBuff()
+    {
+        AudioClip audioDaVez = sons[1];
+        emissor.PlayOneShot(audioDaVez);
+    }
+    public void SomInimSteps()
+    {
+        AudioClip audioDaVez = sons[2];
+        emissor.PlayOneShot(audioDaVez);
+    }
 }

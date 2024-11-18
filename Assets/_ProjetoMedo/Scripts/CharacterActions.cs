@@ -136,6 +136,7 @@ public class CharacterActs : MonoBehaviour
         if (other.CompareTag("Buffs"))
         {
             valorBarraAtual += 1;
+            GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().SomBuff();
 
             progredirBarra();
             StartCoroutine (EfeitoBuff(1f));
@@ -153,7 +154,6 @@ public class CharacterActs : MonoBehaviour
             {
                 Instantiate(aCoisa, new Vector3(-16f, 3.75f, -16f), Quaternion.identity);
                 GameObject.Find("NavMesh").GetComponent<NavMeshTest>().DestinoInimigo();
-                GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaPersseguicao();
                 podeSeguir = false;
             }
 
