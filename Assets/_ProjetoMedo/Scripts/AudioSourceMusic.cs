@@ -60,10 +60,12 @@ public class AudioSourceMusic : MonoBehaviour
         if (emissor.isPlaying)
         {
             emissor.Stop();
+            Debug.Log("parouMusic");
         }
 
         emissor.clip = musicas[indice];
         emissor.Play();
+        Debug.Log("tocouMusic");
     }
 
 }

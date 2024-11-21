@@ -24457,6 +24457,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 1021419521907467257, guid: 2bd7e36640fdcec49bd90958a7837451,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6521972001986071866, guid: 2bd7e36640fdcec49bd90958a7837451,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25872,6 +25877,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 558336820}
+    - target: {fileID: 7450454312435118375, guid: fe93d7c8f5e9b40c382de519167450f2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.938369
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450454312435118375, guid: fe93d7c8f5e9b40c382de519167450f2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.52
+      objectReference: {fileID: 0}
     - target: {fileID: 7518034534820759574, guid: fe93d7c8f5e9b40c382de519167450f2,
         type: 3}
       propertyPath: m_Mesh

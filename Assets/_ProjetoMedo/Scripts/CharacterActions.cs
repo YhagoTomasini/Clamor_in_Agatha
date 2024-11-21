@@ -56,8 +56,6 @@ public class CharacterActs : MonoBehaviour
         rectBarra = barraCanva.GetComponent<RectTransform>();
 
         progredirBarra();
-        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
-
     }
 
     void progredirBarra()

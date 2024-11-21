@@ -12,6 +12,7 @@ public class Pause : MonoBehaviour
     private void Start()
     {
         canvaPause.SetActive(false);
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
     }
     public void TogglePause()
     {
@@ -53,6 +54,10 @@ public class Pause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             TogglePause();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
         }
     }
 }
