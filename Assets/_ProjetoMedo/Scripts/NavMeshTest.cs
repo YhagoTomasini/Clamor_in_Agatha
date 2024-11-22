@@ -57,6 +57,7 @@ public class NavMeshTest : MonoBehaviour
     {
         GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
     }
+
     public void DestinoInimigo()
     {
         GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaPersseguicao();
