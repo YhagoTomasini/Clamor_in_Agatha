@@ -41,6 +41,7 @@ public class JumpUp : MonoBehaviour
         {
             textoJump.enabled = false;
         }
+
         objTriggado = false;
     }
 
@@ -95,6 +96,8 @@ public class JumpUp : MonoBehaviour
             objPulo = true;
         }
 
+        if (objPulo)
+        {
             if (other.gameObject.CompareTag("AlcancePulo") == true)
             {
                 objTriggado = false;
@@ -104,6 +107,6 @@ public class JumpUp : MonoBehaviour
             {
                 textoJump.enabled = false;
             }
-        
+        }
     }
 }
