@@ -1,33 +1,23 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class JumpUp : MonoBehaviour
 {
     public TextMeshProUGUI textoJump;
-    public bool objTriggado;
-    public bool podePular; 
+    private bool objTriggado;
+    public bool podePular;
 
     public GameObject character;
-    public GameObject posiPulo;
-
-    //public GameObject pulos;
-    public GameObject triggerObjPulo;
-    public bool objPulo = true;
-
     public Transform posiFilho;
+
+    private static JumpUp activeJumpUp; // Controle único para evitar conflitos
 
     void Start()
     {
         character = GameObject.Find("Agatha");
-        triggerObjPulo = GameObject.Find("triggerObjPulo");
-
-        //pulos = GameObject.Find("pulos");
-
         podePular = false;
-        
+
         if (textoJump == null)
         {
             GameObject jumpTextObj = GameObject.Find("JumpText");
@@ -48,101 +38,66 @@ public class JumpUp : MonoBehaviour
 
     void Update()
     {
-        if (objPulo)
+        if (objTriggado && Input.GetKeyDown(KeyCode.Space) || objTriggado && Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if (objTriggado && Input.GetKeyDown(KeyCode.Space) || objTriggado && Input.GetKeyDown(KeyCode.Mouse1))
+            if (podePular && activeJumpUp == this) // Garante que apenas a instância ativa realiza o teleporte
             {
-                if (podePular == true)
-                {
-                    StartCoroutine(teleportAction());
-                    character.GetComponent<CharacterActs>().FuncPulo();
-                }
+                StartCoroutine(TeleportAction());
+                character.GetComponent<CharacterActs>().FuncPulo();
             }
         }
     }
 
-    IEnumerator teleportAction()
+    IEnumerator TeleportAction()
     {
-        if (objTriggado && posiFilho != null)
+        if (posiFilho != null)
         {
+            podePular = false; // Bloqueia outras ações
             yield return new WaitForSeconds(0.2f);
-            podePular = false;
-            if (objTriggado == true)
-            {
-                character.GetComponent<Transform>().position = posiFilho.GetComponent<Transform>().position;
-            }
+
+            character.transform.position = posiFilho.position;
 
             yield return new WaitForSeconds(0.2f);
-            podePular = true;
-
-            yield return new WaitForSeconds(0.1f);
+            podePular = true; // Libera novamente após o teleporte
         }
-    } 
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("TriggerObjPulo"))
+        if (other.CompareTag("AlcancePulo"))
         {
-            objPulo = false;
-        }
+            objTriggado = true;
 
-        if (objPulo)
-        {
-            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+            if (activeJumpUp == null) // Define o controle ativo
             {
-                objTriggado = true;
-
-                Transform filho = transform.GetChild(0);
-                if (filho != null)
-                {
-                    posiFilho = filho;
-                }
+                activeJumpUp = this;
             }
 
-            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+            posiFilho = transform.GetChild(0); // Atribui o filho para teleporte
+            if (textoJump != null)
             {
                 textoJump.enabled = true;
             }
         }
-        /*else
-        {
-            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
-            {
-                objTriggado = false;
-            }
-        }*/
     }
 
     private void OnTriggerExit(Collider other)
     {
-
-        if (other.gameObject.CompareTag("TriggerObjPulo"))
-        {
-            objPulo = true;
-        }
-
-        if (posiFilho != null)
-        {
-            posiFilho = null;
-        }
-
-        if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+        if (other.CompareTag("AlcancePulo"))
         {
             objTriggado = false;
-        }
-            
-        if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
-        {
-            textoJump.enabled = false;
-        }
-        
-        /*
-        else
-        {
-            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+
+            if (activeJumpUp == this) // Libera o controle ativo
             {
-                objTriggado = false;
+                activeJumpUp = null;
             }
-        }*/
+
+            posiFilho = null;
+
+            if (textoJump != null)
+            {
+                textoJump.enabled = false;
+            }
+        }
     }
 }
