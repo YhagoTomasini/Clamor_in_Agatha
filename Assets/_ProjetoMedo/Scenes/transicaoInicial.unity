@@ -130,6 +130,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1667691884134651075, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c19281d28d2d6446bfb62a6b876ac44, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bb98db9156d2494d88906fa5383a35f, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: e1c7100a83d17b6488d5c42078632a18, type: 3}
     - target: {fileID: 6325456177769855885, guid: f2ae7dee52fa4074db12cf2581ac2246,
         type: 3}
       propertyPath: m_Name
@@ -422,6 +447,11 @@ PrefabInstance:
       propertyPath: musicas.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6490357451016464904, guid: 63a4752523d0e724c8644cb881ee9352,
+        type: 3}
+      propertyPath: musicas.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4389bcc0a69edfc4682644ee5836bf10, type: 3}
     - target: {fileID: 6490357451016464904, guid: 63a4752523d0e724c8644cb881ee9352,
         type: 3}
       propertyPath: musicas.Array.data[3]
