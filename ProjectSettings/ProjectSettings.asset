@@ -42,8 +42,9 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
     duration: 2
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 6bee53a32fdd54d0689bb2bc21e4f9b3,
-    type: 3}
+  - logo: {fileID: 21300000, guid: e1599abfad1d3884194a86c51d668e22, type: 3}
+    duration: 2
+  m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -142,7 +143,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
+  bundleVersion: 0.1.2
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -292,7 +293,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 408d246eb13e34d0abc2ba048362eabd, type: 3}
+      m_Icon: {fileID: 2800000, guid: 8c019233b240c4143bbcd4a5a712fbb8, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
