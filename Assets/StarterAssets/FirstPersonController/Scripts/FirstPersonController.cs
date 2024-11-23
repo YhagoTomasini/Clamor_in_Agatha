@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -59,9 +60,12 @@ namespace StarterAssets
 		private float _fallTimeoutDelta;
 
 		public bool podeMover = true;
-	
+		public bool andando = false;
+        private bool passosAtivados = false;
+        private bool caiuNoChao = false;
+
 #if ENABLE_INPUT_SYSTEM
-		private PlayerInput _playerInput;
+        private PlayerInput _playerInput;
 #endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
@@ -107,7 +111,6 @@ namespace StarterAssets
 			GroundedCheck();
 			Move();
 			ApplyGravity();
-
         }
 
         private void GroundedCheck()
@@ -146,9 +149,16 @@ namespace StarterAssets
                 {
                     _verticalVelocity = -.5f;
                 }
+                if (!caiuNoChao)
+                {
+                    caiuNoChao = true;
+                    GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().SomQueda();
+                }
             }
             else
             {
+                caiuNoChao = false;
+
                 _verticalVelocity += Physics.gravity.y * Time.deltaTime;
 
                 if (_verticalVelocity < -_terminalVelocity)
@@ -187,12 +197,33 @@ namespace StarterAssets
 				if (_input.move != Vector2.zero)
 				{
 					inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+
+					andando = true;
+                    if (!passosAtivados)
+                    {
+                        passosAtivados = true;
+                        StartCoroutine(AtivarPassos());
+                    }
+                }
+				else
+				{
+					andando = false;
 				}
 
 				_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 			}
 		}
 
+		IEnumerator AtivarPassos()
+		{
+            while (andando)
+            {
+                GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().SomPassos();
+                Debug.Log("pisandinho");
+                yield return new WaitForSeconds(0.5f);
+            }
+            passosAtivados = false;
+        }
         public void BloqueioMove()
 		{
 			if (podeMover)

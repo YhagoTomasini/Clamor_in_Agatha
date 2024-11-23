@@ -54,6 +54,14 @@ public class AudioSourceGeral : MonoBehaviour
         TocarSom(6);
     }
 
+    public void SomPassos()
+    {
+        TocarSom(Random.Range(7, 9));
+    }
+    public void SomQueda()
+    {
+        TocarSom(Random.Range(10, 12));
+    }
     private void TocarSom(int indice)
     {
         if (!emissor.mute && indice >= 0 && indice < sons.Length)

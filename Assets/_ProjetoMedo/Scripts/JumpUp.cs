@@ -62,6 +62,7 @@ public class JumpUp : MonoBehaviour
 
             character.transform.position = posiFilho.position;
             textoJump.enabled = false;
+            GameObject.Find("AudioEffectsManager").GetComponent<AudioSourceGeral>().SomQueda();
 
             yield return new WaitForSeconds(0.2f);
             GameObject.Find("Agatha").GetComponent<FirstPersonController>().BloqueioMove();

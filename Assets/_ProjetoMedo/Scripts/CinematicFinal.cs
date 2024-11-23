@@ -10,7 +10,7 @@ public class CinematicFinal : MonoBehaviour
 {
     public GameObject pInicial;
     public GameObject pFinal;
-    public GameObject canvaMorte;
+    public GameObject canvaFim;
 
     public float duracao = 10f;
     public ScriptableRendererFeature lineRender;
@@ -19,7 +19,7 @@ public class CinematicFinal : MonoBehaviour
 
     void Start()
     {
-        canvaMorte.SetActive(false);
+        canvaFim.SetActive(false);
 
         whiteBlur.gameObject.SetActive(true);
 
@@ -73,9 +73,9 @@ public class CinematicFinal : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("UiGame");
 
-        //canvaMorte.SetActive(true);
-        //GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().PararMusica();
-        //Cursor.lockState = CursorLockMode.None;
+        canvaFim.SetActive(true);
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().PararMusica();
+        Cursor.lockState = CursorLockMode.None;
 
     }
 

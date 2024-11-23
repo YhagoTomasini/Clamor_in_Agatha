@@ -142,6 +142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
         type: 3}
+      propertyPath: sons.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
       propertyPath: sons.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 6c19281d28d2d6446bfb62a6b876ac44, type: 3}
@@ -155,6 +160,36 @@ PrefabInstance:
       propertyPath: sons.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: e1c7100a83d17b6488d5c42078632a18, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 10c7afa89e6ae5c4aa9fb8111d025975, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: a421c18d47a586345a1924a6cacf8449, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 465e0cb6dd834c24fa9aa9fedca039de, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6223d5831dd6ab04d88070f742507564, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: db2e5fbc4f1800146ab683132b592fcb, type: 3}
+    - target: {fileID: 3220338154794266369, guid: f2ae7dee52fa4074db12cf2581ac2246,
+        type: 3}
+      propertyPath: sons.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2a1112a829042d49b268022ffe4d94d, type: 3}
     - target: {fileID: 6325456177769855885, guid: f2ae7dee52fa4074db12cf2581ac2246,
         type: 3}
       propertyPath: m_Name
