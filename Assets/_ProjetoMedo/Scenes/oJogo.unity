@@ -501,11 +501,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoJump: {fileID: 1857891679}
+  objTriggado: 0
   podePular: 0
-  jumpForce: 10
   character: {fileID: 0}
   posiPulo: {fileID: 2081461542}
-  pulos: {fileID: 0}
   triggerObjPulo: {fileID: 0}
   objPulo: 1
 --- !u!65 &26859288
@@ -609,11 +608,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 379175600}
+  - {fileID: 1554605581}
   - {fileID: 26859286}
   - {fileID: 1644545302}
   - {fileID: 515664153}
   - {fileID: 1257553318}
-  - {fileID: 1554605581}
   - {fileID: 1905133345}
   - {fileID: 1010191434}
   - {fileID: 729413183}
@@ -3051,6 +3050,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1644545302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &236885459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 456593320}
+    m_Modifications:
+    - target: {fileID: 1608140987291393874, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_Name
+      value: Buffs (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9bb3b45015294bd0a8ebf16ae66fabb, type: 3}
+--- !u!4 &236885460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8211471347712669021, guid: c9bb3b45015294bd0a8ebf16ae66fabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 236885459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &254844083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4219,6 +4292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 469785073}
+  - {fileID: 236885460}
   - {fileID: 676205936}
   - {fileID: 1189140242}
   - {fileID: 232215131}
@@ -4678,11 +4752,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoJump: {fileID: 1857891679}
+  objTriggado: 0
   podePular: 0
-  jumpForce: 10
   character: {fileID: 0}
   posiPulo: {fileID: 154330932}
-  pulos: {fileID: 0}
   triggerObjPulo: {fileID: 0}
   objPulo: 1
 --- !u!65 &515664155
@@ -13026,11 +13099,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoJump: {fileID: 1857891679}
+  objTriggado: 0
   podePular: 0
-  jumpForce: 10
   character: {fileID: 0}
   posiPulo: {fileID: 1512652474}
-  pulos: {fileID: 0}
   triggerObjPulo: {fileID: 0}
   objPulo: 1
 --- !u!65 &1257553320
@@ -16547,11 +16619,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoJump: {fileID: 1857891679}
+  objTriggado: 0
   podePular: 0
-  jumpForce: 10
   character: {fileID: 0}
   posiPulo: {fileID: 1341234841}
-  pulos: {fileID: 0}
   triggerObjPulo: {fileID: 0}
   objPulo: 1
 --- !u!65 &1554605583
@@ -17711,11 +17782,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoJump: {fileID: 1857891679}
+  objTriggado: 0
   podePular: 0
-  jumpForce: 10
   character: {fileID: 0}
   posiPulo: {fileID: 234047643}
-  pulos: {fileID: 0}
   triggerObjPulo: {fileID: 0}
   objPulo: 1
 --- !u!65 &1644545304
@@ -24250,12 +24320,17 @@ PrefabInstance:
     - target: {fileID: 3047124783443091047, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 1.0694734
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047124783443091047, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3047124783443091047, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 2.2153
       objectReference: {fileID: 0}
     - target: {fileID: 4734122255732858548, guid: fd2c511fd19eb4eef99fc3ea8f14f612,
         type: 3}

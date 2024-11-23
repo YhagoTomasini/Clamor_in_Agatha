@@ -7,23 +7,24 @@ using UnityEngine;
 public class JumpUp : MonoBehaviour
 {
     public TextMeshProUGUI textoJump;
-    private bool objTriggado;
-    public bool podePular;
-    public float jumpForce = 10f;
+    public bool objTriggado;
+    public bool podePular; 
 
     public GameObject character;
     public GameObject posiPulo;
 
-    public GameObject pulos;
+    //public GameObject pulos;
     public GameObject triggerObjPulo;
     public bool objPulo = true;
+
+    public Transform posiFilho;
 
     void Start()
     {
         character = GameObject.Find("Agatha");
         triggerObjPulo = GameObject.Find("triggerObjPulo");
 
-        pulos = GameObject.Find("pulos");
+        //pulos = GameObject.Find("pulos");
 
         podePular = false;
         
@@ -62,9 +63,20 @@ public class JumpUp : MonoBehaviour
 
     IEnumerator teleportAction()
     {
-        yield return new  WaitForSeconds(0.5f);
-        character.GetComponent<Transform>().position = posiPulo.GetComponent<Transform>().position;
-        yield return new WaitForSeconds(0.5f);
+        if (objTriggado && posiFilho != null)
+        {
+            yield return new WaitForSeconds(0.2f);
+            podePular = false;
+            if (objTriggado == true)
+            {
+                character.GetComponent<Transform>().position = posiFilho.GetComponent<Transform>().position;
+            }
+
+            yield return new WaitForSeconds(0.2f);
+            podePular = true;
+
+            yield return new WaitForSeconds(0.1f);
+        }
     } 
 
     private void OnTriggerEnter(Collider other)
@@ -76,9 +88,15 @@ public class JumpUp : MonoBehaviour
 
         if (objPulo)
         {
-            if (other.gameObject.CompareTag("AlcancePulo") == true)
+            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
             {
                 objTriggado = true;
+
+                Transform filho = transform.GetChild(0);
+                if (filho != null)
+                {
+                    posiFilho = filho;
+                }
             }
 
             if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
@@ -86,6 +104,13 @@ public class JumpUp : MonoBehaviour
                 textoJump.enabled = true;
             }
         }
+        /*else
+        {
+            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+            {
+                objTriggado = false;
+            }
+        }*/
     }
 
     private void OnTriggerExit(Collider other)
@@ -96,17 +121,28 @@ public class JumpUp : MonoBehaviour
             objPulo = true;
         }
 
-        if (objPulo)
+        if (posiFilho != null)
         {
-            if (other.gameObject.CompareTag("AlcancePulo") == true)
+            posiFilho = null;
+        }
+
+        if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+        {
+            objTriggado = false;
+        }
+            
+        if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
+        {
+            textoJump.enabled = false;
+        }
+        
+        /*
+        else
+        {
+            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
             {
                 objTriggado = false;
             }
-
-            if (podePular == true && other.gameObject.CompareTag("AlcancePulo"))
-            {
-                textoJump.enabled = false;
-            }
-        }
+        }*/
     }
 }
