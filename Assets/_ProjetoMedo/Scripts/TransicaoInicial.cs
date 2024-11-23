@@ -12,7 +12,7 @@ public class TransicaoInicial : MonoBehaviour
     {
         if (lineRender != null)
         {
-            lineRender.SetActive(false);
+            lineRender.SetActive(true);
         }
         StartCoroutine(IniciarJogo());
     }
