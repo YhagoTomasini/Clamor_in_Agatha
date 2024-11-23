@@ -15,7 +15,7 @@ public class CharacterActs : MonoBehaviour
     public RectTransform rectBarra;
     public float valorbarraNor;
     public float valorBarraAtual;
-    private float valorBarraMax = 10;
+    private float valorBarraMax = 12;
 
     public Image whiteBlur;
 
@@ -172,7 +172,7 @@ public class CharacterActs : MonoBehaviour
             }
         }
 
-        if (valorBarraAtual >= 3 && pulos != null)
+        if (valorBarraAtual >= 5 && pulos != null)
         {
             iconPulo.SetActive(true);
 
@@ -185,8 +185,6 @@ public class CharacterActs : MonoBehaviour
                     if (jumpUp != null)
                     {
                         jumpUp.podePular = true;
-
-                        //jumpUp.DefinirColliders(other.gameObject);
                     } 
                 }
             }

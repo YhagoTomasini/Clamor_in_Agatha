@@ -20,8 +20,8 @@ public class TransicaoInicial : MonoBehaviour
     IEnumerator IniciarJogo()
     {
         yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene("oJogo");
-        //SceneManager.LoadScene("FinalCutscene");
+        //SceneManager.LoadScene("oJogo");
+        SceneManager.LoadScene("FinalCutscene");
         //SceneManager.LoadScene("UiGame");
     }
 }

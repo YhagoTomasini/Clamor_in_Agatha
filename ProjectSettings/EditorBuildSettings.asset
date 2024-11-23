@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ProjetoMedo/Scenes/oJogo.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_ProjetoMedo/Scenes/transicaoInicial.unity
+    guid: 70e191041827fda489b03e796dfe7455
+  - enabled: 1
+    path: Assets/_ProjetoMedo/Scenes/FinalCutscene.unity
+    guid: 75a5ed38f88594979b51e0a2201f445a
   m_configObjects: {}
