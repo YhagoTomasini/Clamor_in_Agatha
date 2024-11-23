@@ -55,6 +55,14 @@ public class AudioSourceMusic : MonoBehaviour
         }
     }
 
+    public void TemaFinal()
+    {
+        if (!emissor.mute)
+        {
+            TocarMusica(3);
+        }
+    }
+
     private void TocarMusica(int indice)
     {
         if (emissor.isPlaying)
@@ -66,6 +74,14 @@ public class AudioSourceMusic : MonoBehaviour
         emissor.clip = musicas[indice];
         emissor.Play();
         Debug.Log("tocouMusic");
+    }
+
+    public void PararMusica()
+    {
+        if (emissor.isPlaying)
+        {
+            emissor.Stop();
+        }
     }
 
 }

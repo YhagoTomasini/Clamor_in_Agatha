@@ -417,6 +417,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioMusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6490357451016464904, guid: 63a4752523d0e724c8644cb881ee9352,
+        type: 3}
+      propertyPath: musicas.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490357451016464904, guid: 63a4752523d0e724c8644cb881ee9352,
+        type: 3}
+      propertyPath: musicas.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 459e005dc4de87f44976cc5343b58c00, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

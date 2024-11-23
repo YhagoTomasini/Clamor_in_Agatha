@@ -55,9 +55,5 @@ public class Pause : MonoBehaviour
         {
             TogglePause();
         }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaJogo();
-        }
     }
 }

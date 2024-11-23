@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -9,25 +10,29 @@ public class CinematicFinal : MonoBehaviour
 {
     public GameObject pInicial;
     public GameObject pFinal;
+    public GameObject canvaMorte;
 
-    public float duracao = 5f;
+    public float duracao = 10f;
     public ScriptableRendererFeature lineRender;
 
     public Image whiteBlur;
 
     void Start()
     {
+        canvaMorte.SetActive(false);
+
         whiteBlur.gameObject.SetActive(true);
 
         if (lineRender != null)
         {
             lineRender.SetActive(false);
         }
-        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaMenu();
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaFinal();
+
         pInicial = GameObject.Find("posicaoI");
         pFinal = GameObject.Find("posicaoF");
 
-        StartCoroutine(MovimentoCam(2f));
+        StartCoroutine(MovimentoCam(8f));
 
     }
 
@@ -38,19 +43,20 @@ public class CinematicFinal : MonoBehaviour
 
         whiteBlur.color = blurColor;
 
-        float duracao = 0f;
-        while (duracao < duracaoFade)
+        float duracaoBlur = 0f;
+        while (duracaoBlur < duracaoFade)
         {
-            blurColor.a = Mathf.Lerp(1f, 0f, duracao / duracaoFade);
+            blurColor.a = Mathf.Lerp(1f, 0f, duracaoBlur / duracaoFade);
             whiteBlur.color = blurColor;
-            duracao += Time.deltaTime;
+            duracaoBlur += Time.deltaTime;
 
             yield return null;
         }
 
         whiteBlur.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(2f);
+        
         float elapsedTime = 0f;
 
         while (elapsedTime < duracao)
@@ -63,6 +69,14 @@ public class CinematicFinal : MonoBehaviour
         }
 
         transform.position = pFinal.transform.position;
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("UiGame");
+
+        //canvaMorte.SetActive(true);
+        //GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().PararMusica();
+        //Cursor.lockState = CursorLockMode.None;
+
     }
 
     void Update()

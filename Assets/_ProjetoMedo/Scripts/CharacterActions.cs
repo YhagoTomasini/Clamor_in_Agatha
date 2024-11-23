@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 //using UnityEngine.UIElements;
 using UnityEngine.UI;
 //using UnityEngine.Windows;
@@ -193,7 +195,7 @@ public class CharacterActs : MonoBehaviour
 
         if (other.CompareTag("FCD"))
         {
-            AcabarJogo();
+            SceneManager.LoadScene("FinalCutscene");
         }
     }
 
