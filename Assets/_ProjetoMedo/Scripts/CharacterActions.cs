@@ -195,6 +195,8 @@ public class CharacterActs : MonoBehaviour
 
         if (other.CompareTag("FCD"))
         {
+            GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().PararMusica();
+
             SceneManager.LoadScene("FinalCutscene");
         }
     }

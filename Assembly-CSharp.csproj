@@ -116,6 +116,7 @@
     <Compile Include="Assets\_ProjetoMedo\Scripts\MenuERestart.cs" />
     <Compile Include="Assets\_ProjetoMedo\_LaEfeito\ondaSom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\_ProjetoMedo\Scripts\TextSpacing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\_ProjetoMedo\Scripts\CinematicFinal.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
