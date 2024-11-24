@@ -24,7 +24,12 @@ public class MenuERestart : MonoBehaviour
     {
         GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaMenu();
 
-        GameObject.Find("PauseManager").GetComponent<Pause>().TogglePause();
+        GameObject pauseManager = GameObject.Find("PauseManager");
+
+        if (pauseManager != null)
+        {
+            pauseManager.GetComponent<Pause>().TogglePause();
+        }
         
 
         Debug.Log("Carregando cena UiGame");

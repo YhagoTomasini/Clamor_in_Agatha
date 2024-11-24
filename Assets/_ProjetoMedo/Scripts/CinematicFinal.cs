@@ -27,7 +27,6 @@ public class CinematicFinal : MonoBehaviour
         {
             lineRender.SetActive(false);
         }
-        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaFinal();
 
         pInicial = GameObject.Find("posicaoI");
         pFinal = GameObject.Find("posicaoF");
@@ -42,6 +41,10 @@ public class CinematicFinal : MonoBehaviour
         Color blurColor = whiteBlur.color;
 
         whiteBlur.color = blurColor;
+        
+        yield return new WaitForSeconds(2f);
+
+        GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().TemaFinal();
 
         float duracaoBlur = 0f;
         while (duracaoBlur < duracaoFade)
@@ -71,7 +74,7 @@ public class CinematicFinal : MonoBehaviour
         transform.position = pFinal.transform.position;
 
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("UiGame");
+        //SceneManager.LoadScene("UiGame");
 
         canvaFim.SetActive(true);
         GameObject.Find("AudioMusicManager").GetComponent<AudioSourceMusic>().PararMusica();
