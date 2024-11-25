@@ -12,11 +12,21 @@ public class GradualTMPTextOnCanvas : MonoBehaviour
     public GameObject texto;
     public GameObject controles;
 
+    /*private void Start()
+    {
+        StartCoroutine(DisplayTextGradually());
+        controles.SetActive(false);
+    }*/
     private void OnEnable()
     {
         // Inicia o efeito de texto quando o Canvas for ativado
         StartCoroutine(DisplayTextGradually());
         controles.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        texto.SetActive(true);
     }
 
     IEnumerator DisplayTextGradually()
